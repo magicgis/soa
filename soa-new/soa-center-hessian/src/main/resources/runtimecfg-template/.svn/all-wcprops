@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/YeePay/!svn/ver/132294/dev/3g/soa-center/branches/default-new/soa-center-hessian/src/main/resources/runtimecfg-template
+END
+ehcachecfg.xml
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-hessian/src/main/resources/runtimecfg-template/ehcachecfg.xml
+END
+yeepay-async.properties
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/YeePay/!svn/ver/132294/dev/3g/soa-center/branches/default-new/soa-center-hessian/src/main/resources/runtimecfg-template/yeepay-async.properties
+END
+initcomponents.properties
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-hessian/src/main/resources/runtimecfg-template/initcomponents.properties
+END
+memcached.xml
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-hessian/src/main/resources/runtimecfg-template/memcached.xml
+END
+destorycomponents.properties
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-hessian/src/main/resources/runtimecfg-template/destorycomponents.properties
+END
+yeepay-config.properties
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-hessian/src/main/resources/runtimecfg-template/yeepay-config.properties
+END
+log4j.xml
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/YeePay/!svn/ver/130474/dev/3g/soa-center/branches/default-new/soa-center-hessian/src/main/resources/runtimecfg-template/log4j.xml
+END

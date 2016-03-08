@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/YeePay/!svn/ver/182418/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/dao
+END
+AppOwnerDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/YeePay/!svn/ver/107378/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/dao/AppOwnerDao.java
+END
+DeployRecordDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/YeePay/!svn/ver/182418/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/dao/DeployRecordDao.java
+END
+AppInfoDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/dao/AppInfoDao.java
+END
+MethodInfoDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/dao/MethodInfoDao.java
+END
+ServiceInfoDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/dao/ServiceInfoDao.java
+END
+AppDependencyDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/dao/AppDependencyDao.java
+END
+MonitorDataDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/dao/MonitorDataDao.java
+END
+AppUpgradeInfoDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/dao/AppUpgradeInfoDao.java
+END
+AddressDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/dao/AddressDao.java
+END
+AppAddressDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/dao/AppAddressDao.java
+END
+NetworkDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/dao/NetworkDao.java
+END

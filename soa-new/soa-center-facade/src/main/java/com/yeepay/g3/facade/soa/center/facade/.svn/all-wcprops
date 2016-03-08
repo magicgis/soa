@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/YeePay/!svn/ver/183359/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/facade
+END
+ServerMonitorFacade.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/facade/ServerMonitorFacade.java
+END
+UserFacade.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/facade/UserFacade.java
+END
+OverrideFacade.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/YeePay/!svn/ver/183359/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/facade/OverrideFacade.java
+END
+RegistryMonitorFacade.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/facade/RegistryMonitorFacade.java
+END
+DeployRecoverFacade.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/YeePay/!svn/ver/182418/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/facade/DeployRecoverFacade.java
+END
+LoadBalanceFacade.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/facade/LoadBalanceFacade.java
+END
+AddressFacade.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/YeePay/!svn/ver/183079/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/facade/AddressFacade.java
+END
+ServiceQueryFacade.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/facade/ServiceQueryFacade.java
+END
+MonitorFacade.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/facade/MonitorFacade.java
+END
+WeightFacade.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/facade/WeightFacade.java
+END
+AppMgtFacade.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/facade/AppMgtFacade.java
+END
+NetworkFacade.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/YeePay/!svn/ver/107378/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/facade/NetworkFacade.java
+END
+ProviderFacade.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/facade/ProviderFacade.java
+END
+OwnerFacade.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/facade/OwnerFacade.java
+END
+ConsumerFacade.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/facade/ConsumerFacade.java
+END
+AppOwnerFacade.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/YeePay/!svn/ver/107378/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/facade/AppOwnerFacade.java
+END
+ServiceTagFacade.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/facade/ServiceTagFacade.java
+END
+RouteFacade.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/facade/RouteFacade.java
+END
+IDCControlFacade.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/YeePay/!svn/ver/150960/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/facade/IDCControlFacade.java
+END
+AccessFacade.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/facade/AccessFacade.java
+END
+RegistrySyncFacade.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/facade/RegistrySyncFacade.java
+END
+ConfigFacade.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/YeePay/!svn/ver/107378/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/facade/ConfigFacade.java
+END
+ServiceMgtFacade.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/YeePay/!svn/ver/182418/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/facade/ServiceMgtFacade.java
+END

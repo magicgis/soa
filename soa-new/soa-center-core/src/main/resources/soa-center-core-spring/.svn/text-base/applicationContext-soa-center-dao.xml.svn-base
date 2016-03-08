@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd"
+	default-autowire="byName">
+
+	<aop:aspectj-autoproxy />
+
+	<tx:annotation-driven transaction-manager="txManager" />
+	<bean id="txManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="txTemplate"
+		class="org.springframework.transaction.support.TransactionTemplate">
+		<property name="transactionManager" ref="txManager" />
+	</bean>
+
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate"
+		p:dataSource-ref="dataSource" />
+
+	<bean id="sqlSessionFactory"
+		class="com.yeepay.g3.utils.persistence.mybatis.SqlSessionFactoryBeanWapper">
+		<property name="configLocation"
+			value="classpath:/soa-center-core-ibatis/ibatis-sqlMapConfig.xml" />
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations"
+			value="classpath*:/soa-center-core-ibatis/sqlmap/*.xml" />
+	</bean>
+
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.yeepay.g3.core.soa.center" />
+		<property name="annotationClass" value="org.springframework.stereotype.Repository" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+
+	<bean id="baseDao"
+		class="com.yeepay.g3.utils.persistence.mybatis.GenericDaoDefault">
+		<property name="sqlSessionFactory">
+			<ref bean="sqlSessionFactory" />
+		</property>
+	</bean>
+	<bean id="appDependencyDao"
+		class="com.yeepay.g3.core.soa.center.dao.impl.AppDependencyDaoImpl"
+		parent="baseDao" />
+	<bean id="appInfoDao" class="com.yeepay.g3.core.soa.center.dao.impl.AppInfoDaoImpl"
+		parent="baseDao" />
+	<bean id="appOwnerDao" class="com.yeepay.g3.core.soa.center.dao.impl.AppOwnerDaoImpl"
+		parent="baseDao" />
+	<bean id="appUpgradeInfoDao"
+		class="com.yeepay.g3.core.soa.center.dao.impl.AppUpgradeInfoDaoImpl"
+		parent="baseDao" />
+	<bean id="methodInfoDao"
+		class="com.yeepay.g3.core.soa.center.dao.impl.MethodInfoDaoImpl"
+		parent="baseDao" />
+	<bean id="serviceInfoDao"
+		class="com.yeepay.g3.core.soa.center.dao.impl.ServiceInfoDaoImpl"
+		parent="baseDao" />
+	<bean id="addressDao" class="com.yeepay.g3.core.soa.center.dao.impl.AddressDaoImpl"
+		parent="baseDao" />
+	<bean id="appAddressDao"
+		class="com.yeepay.g3.core.soa.center.dao.impl.AppAddressDaoImpl"
+		parent="baseDao" />
+	<bean id="networkDao" class="com.yeepay.g3.core.soa.center.dao.impl.NetworkDaoImpl"
+		parent="baseDao" />
+	<bean id="deployRecordDao" class="com.yeepay.g3.core.soa.center.dao.impl.DeployRecordDaoImpl"
+		parent="baseDao" />
+</beans>

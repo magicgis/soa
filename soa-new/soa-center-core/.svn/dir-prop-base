@@ -1,0 +1,16 @@
+K 10
+svn:ignore
+V 19
+*.iml
+.idea
+target
+
+K 13
+svn:mergeinfo
+V 323
+/dev/3g/dubbo/branches/default/dubbo-core:91419-93690
+/dev/3g/soa-center/branches/default-new/soa-center-core:107368-166897
+/dev/3g/soa-center/branches/default/dubbo-core:93691-93743
+/dev/3g/soa-center/branches/default/soa-center-core:93744-102228,121338-133367
+/dev/3g/soa-center/trunk/soa-center-core:107368-182632,183698
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/YeePay/!svn/ver/189002/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/dubbo/utils/sync
+END
+Pair.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/dubbo/utils/sync/Pair.java
+END
+RegistryConfigSync.java
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/YeePay/!svn/ver/107378/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/dubbo/utils/sync/RegistryConfigSync.java
+END
+RegistryServerSync.java
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/YeePay/!svn/ver/189002/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/dubbo/utils/sync/RegistryServerSync.java
+END
+SyncUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/dubbo/utils/sync/SyncUtils.java
+END

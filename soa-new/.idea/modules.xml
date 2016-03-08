@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/soa-center-core/soa-center-core.iml" filepath="$PROJECT_DIR$/soa-center-core/soa-center-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/soa-center-facade/soa-center-facade.iml" filepath="$PROJECT_DIR$/soa-center-facade/soa-center-facade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/soa-center-hessian/soa-center-hessian.iml" filepath="$PROJECT_DIR$/soa-center-hessian/soa-center-hessian.iml" />
+      <module fileurl="file://$PROJECT_DIR$/soa-center-parent.iml" filepath="$PROJECT_DIR$/soa-center-parent.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Network">
+
+	<resultMap type="Network" id="networkMap">
+		<id property="id" column="ID" />
+		<id property="consumer" column="CONSUMER" />
+		<id property="provider" column="PROVIDER" />
+		<id property="status" column="STATUS" />
+		<id property="createDate" column="CREATE_DATE" />
+		<id property="lastModifyDate" column="LAST_MODIFY_DATE" />
+	</resultMap>
+
+	<insert id="insert" parameterType="Network" keyProperty="id"
+		useGeneratedKeys="true">
+	INSERT INTO TBL_SOA_NETWORK
+	(
+		CONSUMER,
+		PROVIDER,
+		STATUS,
+		CREATE_DATE,
+		LAST_MODIFY_DATE
+	) VALUES (
+		#{consumer,jdbcType=VARCHAR},
+		#{provider,jdbcType=VARCHAR},
+		#{status,jdbcType=VARCHAR},
+		CURRENT_TIMESTAMP,
+		CURRENT_TIMESTAMP
+	)
+	</insert>
+
+	<insert id="batchInsert" parameterType="Network">
+	INSERT INTO TBL_SOA_NETWORK
+	(
+		CONSUMER,
+		PROVIDER,
+		STATUS,
+		CREATE_DATE,
+		LAST_MODIFY_DATE
+	) VALUES (
+		#{consumer,jdbcType=VARCHAR},
+		#{provider,jdbcType=VARCHAR},
+		#{status,jdbcType=VARCHAR},
+		CURRENT_TIMESTAMP,
+		CURRENT_TIMESTAMP
+	)
+	</insert>
+
+	<select id="get" parameterType="Long" resultMap="networkMap">
+		SELECT * FROM TBL_SOA_NETWORK WHERE ID = #{id}
+	</select>
+
+	<select id="find" parameterType="Map" resultMap="networkMap">
+		SELECT * FROM TBL_SOA_NETWORK WHERE CONSUMER = #{consumer} AND PROVIDER = #{provider} FETCH FIRST 1 ROWS ONLY
+	</select>
+
+	<select id="queryProviders" parameterType="String" resultMap="networkMap">
+		SELECT * FROM TBL_SOA_NETWORK WHERE CONSUMER = #{address} ORDER BY ID DESC WITH UR
+	</select>
+
+	<select id="queryConsumers" parameterType="String" resultMap="networkMap">
+		SELECT * FROM TBL_SOA_NETWORK WHERE PROVIDER = #{address} ORDER BY ID DESC WITH UR
+	</select>
+
+	<delete id="delete" parameterType="long">
+		DELETE FROM TBL_SOA_NETWORK WHERE ID = #{id}
+	</delete>
+
+	<delete id="deleteByAddress" parameterType="String">
+		DELETE FROM TBL_SOA_NETWORK WHERE CONSUMER = #{address} OR PROVIDER = #{address}
+	</delete>
+	<delete id="deleteAllByAddress" parameterType="String">
+		DELETE FROM TBL_SOA_NETWORK WHERE CONSUMER LIKE #{address} || '%' OR PROVIDER LIKE #{address} || '%'
+	</delete>
+	<delete id="deleteByStatus" parameterType="String">
+		DELETE FROM TBL_SOA_NETWORK WHERE STATUS = #{status}
+	</delete>
+
+	<update id="update" parameterType="Network">
+		UPDATE TBL_SOA_NETWORK
+		SET
+			STATUS=#{status,jdbcType=VARCHAR},
+			LAST_MODIFY_DATE = CURRENT_TIMESTAMP
+		WHERE ID = #{id}
+	</update>
+	<update id="syncUknown" parameterType="Map">
+		<![CDATA[
+		UPDATE TBL_SOA_NETWORK
+		SET
+			STATUS=#{status,jdbcType=VARCHAR},
+			LAST_MODIFY_DATE = CURRENT_TIMESTAMP
+		WHERE LAST_MODIFY_DATE <= #{lastModifyDate,jdbcType=TIMESTAMP}
+		]]>
+	</update>
+</mapper>

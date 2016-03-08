@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/YeePay/!svn/ver/188003/dev/3g/soa-center/branches/default-new/soa-center-hessian/src/main/java/com/yeepay/g3/core/soa/center
+END
+AddressEnableServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/YeePay/!svn/ver/183083/dev/3g/soa-center/branches/default-new/soa-center-hessian/src/main/java/com/yeepay/g3/core/soa/center/AddressEnableServlet.java
+END
+AddressRoleChangeServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/YeePay/!svn/ver/154413/dev/3g/soa-center/branches/default-new/soa-center-hessian/src/main/java/com/yeepay/g3/core/soa/center/AddressRoleChangeServlet.java
+END
+SoaBaseServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/YeePay/!svn/ver/147376/dev/3g/soa-center/branches/default-new/soa-center-hessian/src/main/java/com/yeepay/g3/core/soa/center/SoaBaseServlet.java
+END
+NoProviderMonitorServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/YeePay/!svn/ver/147376/dev/3g/soa-center/branches/default-new/soa-center-hessian/src/main/java/com/yeepay/g3/core/soa/center/NoProviderMonitorServlet.java
+END
+IDCIPRuleServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/YeePay/!svn/ver/150960/dev/3g/soa-center/branches/default-new/soa-center-hessian/src/main/java/com/yeepay/g3/core/soa/center/IDCIPRuleServlet.java
+END
+IDCDisableServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/YeePay/!svn/ver/150960/dev/3g/soa-center/branches/default-new/soa-center-hessian/src/main/java/com/yeepay/g3/core/soa/center/IDCDisableServlet.java
+END
+IDCCrossRateServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/YeePay/!svn/ver/150960/dev/3g/soa-center/branches/default-new/soa-center-hessian/src/main/java/com/yeepay/g3/core/soa/center/IDCCrossRateServlet.java
+END
+IDCQueryServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/YeePay/!svn/ver/150960/dev/3g/soa-center/branches/default-new/soa-center-hessian/src/main/java/com/yeepay/g3/core/soa/center/IDCQueryServlet.java
+END
+IDCEnableServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/YeePay/!svn/ver/150960/dev/3g/soa-center/branches/default-new/soa-center-hessian/src/main/java/com/yeepay/g3/core/soa/center/IDCEnableServlet.java
+END
+ProviderForbidMonitorServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/YeePay/!svn/ver/188003/dev/3g/soa-center/branches/default-new/soa-center-hessian/src/main/java/com/yeepay/g3/core/soa/center/ProviderForbidMonitorServlet.java
+END
+AddressDisableServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/YeePay/!svn/ver/182418/dev/3g/soa-center/branches/default-new/soa-center-hessian/src/main/java/com/yeepay/g3/core/soa/center/AddressDisableServlet.java
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/YeePay/!svn/ver/183079/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/event
+END
+DeployRecoverHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/YeePay/!svn/ver/183079/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/event/DeployRecoverHandler.java
+END
+SyncNetworkHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/YeePay/!svn/ver/110165/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/event/SyncNetworkHandler.java
+END
+SyncAppInfoHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/event/SyncAppInfoHandler.java
+END
+SyncMethodInfoHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/event/SyncMethodInfoHandler.java
+END
+SyncServiceInfoHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/event/SyncServiceInfoHandler.java
+END
+SyncAddressInfoHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/YeePay/!svn/ver/183079/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/event/SyncAddressInfoHandler.java
+END

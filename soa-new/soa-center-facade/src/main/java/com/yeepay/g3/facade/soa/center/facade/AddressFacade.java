@@ -1,0 +1,67 @@
+/**
+ * Copyright: Copyright (c)2011
+ * Company: 易宝支付(YeePay)
+ */
+package com.yeepay.g3.facade.soa.center.facade;
+
+import java.util.Set;
+
+import com.yeepay.g3.facade.soa.center.param.AddressQueryParam;
+import com.yeepay.g3.utils.common.page.PageList;
+
+/**
+ * 机器管理
+ *
+ * @author：wang.bao
+ * @since：2014年8月28日 上午10:14:08
+ * @version:
+ */
+public interface AddressFacade {
+	/**
+	 * 查询机器列表
+	 *
+	 * @param queryParam
+	 *            动态化查询参数，按应用、服务
+	 * @return
+	 */
+	PageList queryAddress(AddressQueryParam queryParam);
+
+	/**
+	 * 对内：只有环境为test的机器才能对内或对外
+	 *
+	 * @param address
+	 */
+	void changeInternal(String address, String appName);
+
+	/**
+	 * 对外：只有环境为test的机器才能对内或对外
+	 *
+	 * @param address
+	 */
+	void changeExternal(String address, String appName);
+
+	/**
+	 * 禁用机器，即禁用本机所有提供者消费者
+	 */
+	void disable(String address, boolean includeConsumer);
+
+	/**
+	 * 启用机器，即启用本机所有提供者消费者
+	 */
+	void enable(String address, boolean includeConsumer);
+
+	/**
+	 * 启用所有机器
+	 */
+	void enableAll();
+
+	/**
+	 * 下线机器
+	 */
+	void offline(String address);
+
+	/**
+	 * 查找所有机器都被禁用的应用（应用不可用，监控需报警）
+	 */
+	Set<String> findNoProvoiderApps();
+}

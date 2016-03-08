@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/YeePay/!svn/ver/183359/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/param
+END
+NetworkQueryParam.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/param/NetworkQueryParam.java
+END
+RegisteredQueryParam.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/param/RegisteredQueryParam.java
+END
+ClientQueryParam.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/param/ClientQueryParam.java
+END
+ServiceQueryParam.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/param/ServiceQueryParam.java
+END
+AddressQueryParam.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/YeePay/!svn/ver/183359/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/param/AddressQueryParam.java
+END
+SubscribedQueryParam.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/param/SubscribedQueryParam.java
+END

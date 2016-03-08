@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/YeePay/!svn/ver/182418/dev/3g/soa-center/branches/default-new/soa-center-core/src/test/resources
+END
+testContext-jdbc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/YeePay/!svn/ver/182418/dev/3g/soa-center/branches/default-new/soa-center-core/src/test/resources/testContext-jdbc.xml
+END
+testContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/test/resources/testContext.xml
+END
+dubbo.properties
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/test/resources/dubbo.properties
+END
+testData.sql
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/test/resources/testData.sql
+END
+log4j.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/test/resources/log4j.xml
+END

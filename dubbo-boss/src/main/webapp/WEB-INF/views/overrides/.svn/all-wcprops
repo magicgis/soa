@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/YeePay/!svn/ver/183360/dev/app/dubbo-boss/branches/default/src/main/webapp/WEB-INF/views/overrides
+END
+add.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/YeePay/!svn/ver/104127/dev/app/dubbo-boss/branches/default/src/main/webapp/WEB-INF/views/overrides/add.jsp
+END
+list.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/YeePay/!svn/ver/183360/dev/app/dubbo-boss/branches/default/src/main/webapp/WEB-INF/views/overrides/list.jsp
+END
+detail.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/YeePay/!svn/ver/102053/dev/app/dubbo-boss/branches/default/src/main/webapp/WEB-INF/views/overrides/detail.jsp
+END

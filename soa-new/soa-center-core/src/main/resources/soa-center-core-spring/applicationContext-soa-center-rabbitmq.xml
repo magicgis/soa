@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--<bean id="config" class="com.yeepay.g3.utils.async.rabbitmq.RabbitMQConfig">-->
+        <!--<property name="host" value="rabbitmq.bass.3g"/>-->
+        <!--<property name="port">-->
+            <!--<value>5672</value>-->
+        <!--</property>-->
+        <!--<property name="username" value="soa"/>-->
+        <!--<property name="password" value="Zj4xyBkgjd-soa"/>-->
+        <!--<property name="virtualHost" value="soa"/>-->
+    <!--</bean>-->
+
+    <bean id="rabbitMQManager" class="com.yeepay.g3.utils.async.rabbitmq.RabbitMQManager">
+        <!--<property name="config" ref="config"/>-->
+        <property name="exchage2queue">
+            <map>
+                <entry key="soa.rmi.monitor" value="soa.rmi.monitor"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="rabbitMQSender" class="com.yeepay.g3.utils.async.rabbitmq.send.DefaultRabbitMQSender">
+        <property name="rabbitMQManager" ref="rabbitMQManager"/>
+    </bean>
+
+    <bean class="com.yeepay.g3.utils.async.send.AsyncEventSender">
+        <property name="rabbitMQSender" ref="rabbitMQSender"/>
+    </bean>
+</beans>

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/YeePay/!svn/ver/119577/dev/app/dubbo-boss/branches/default/src/main/webapp/WEB-INF/views/applications/control
+END
+query.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/YeePay/!svn/ver/102123/dev/app/dubbo-boss/branches/default/src/main/webapp/WEB-INF/views/applications/control/query.jsp
+END
+editAppControl.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/YeePay/!svn/ver/119577/dev/app/dubbo-boss/branches/default/src/main/webapp/WEB-INF/views/applications/control/editAppControl.jsp
+END
+editUpgradeControl.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/YeePay/!svn/ver/100959/dev/app/dubbo-boss/branches/default/src/main/webapp/WEB-INF/views/applications/control/editUpgradeControl.jsp
+END
+moveJavadocControl.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/YeePay/!svn/ver/99655/dev/app/dubbo-boss/branches/default/src/main/webapp/WEB-INF/views/applications/control/moveJavadocControl.jsp
+END
+editOwnerControl.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/YeePay/!svn/ver/99655/dev/app/dubbo-boss/branches/default/src/main/webapp/WEB-INF/views/applications/control/editOwnerControl.jsp
+END
+authAppControl.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/YeePay/!svn/ver/119577/dev/app/dubbo-boss/branches/default/src/main/webapp/WEB-INF/views/applications/control/authAppControl.jsp
+END

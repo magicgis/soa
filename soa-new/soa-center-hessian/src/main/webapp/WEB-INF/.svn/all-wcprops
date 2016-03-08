@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/YeePay/!svn/ver/183079/dev/3g/soa-center/branches/default-new/soa-center-hessian/src/main/webapp/WEB-INF
+END
+hessian-servlet.xml
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/YeePay/!svn/ver/166110/dev/3g/soa-center/branches/default-new/soa-center-hessian/src/main/webapp/WEB-INF/hessian-servlet.xml
+END
+web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/YeePay/!svn/ver/183079/dev/3g/soa-center/branches/default-new/soa-center-hessian/src/main/webapp/WEB-INF/web.xml
+END

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+       default-autowire="byName">
+
+	<context:component-scan base-package="com.yeepay.g3.core.soa.center"/>
+
+	<import resource="classpath:/yeepay-event-spring/event-base-bean.xml"/>
+	<import resource="classpath:/soa-center-core-spring/applicationContext-soa-center-datasource.xml"/>
+	<import resource="classpath:/soa-center-core-spring/applicationContext-soa-center-dao.xml"/>
+	<import resource="classpath:/soa-center-core-spring/applicationContext-soa-center-dao-log.xml"/>
+	<import resource="classpath:/soa-center-core-spring/applicationContext-soa-center-query.xml"/>
+	<import resource="classpath:/soa-center-core-spring/applicationContext-soa-center-service.xml"/>
+	<import resource="classpath:/soa-center-core-spring/applicationContext-soa-center-biz.xml"/>
+	<import resource="classpath:/soa-center-core-spring/applicationContext-soa-provider.xml"/>
+	<!--
+	<import resource="classpath:/soa-center-core-spring/applicationContext-soa-center-rabbitmq.xml" />
+	-->
+
+    <!--<bean id="performanceAspect" class="com.yeepay.g3.utils.event.ext.perf.PerformanceAspect">-->
+    <!--<property name="threshold" value="300"/>-->
+    <!--<property name="excludeMethod">-->
+    <!--<list>-->
+    <!--<value>toString</value>-->
+    <!--<value>get</value>-->
+    <!--<value>find</value>-->
+    <!--<value>add</value>-->
+    <!--<value>update</value>-->
+    <!--<value>delete</value>-->
+    <!--</list>-->
+    <!--</property>-->
+    <!--</bean>-->
+    <!--<aop:config>-->
+    <!--<aop:aspect id="performanceAspectId" ref="performanceAspect">-->
+    <!--<aop:pointcut id="pointcut" expression="execution(* com..*.*Service.*(..)) || execution(* com..*.*Dao.*(..)) || execution(* com..*.*Facade.*(..)) || execution(* com..*.*Biz.*(..)) || execution(* com..*.*Handler.*(..)) || execution(* com..*.*Adapter.*(..))"/>-->
+    <!--<aop:around pointcut-ref="pointcut" method="intercept"/>-->
+    <!--</aop:aspect>-->
+    <!--</aop:config>-->
+</beans>

@@ -1,0 +1,12 @@
+K 10
+svn:ignore
+V 28
+.idea
+soa-center-parent.iml
+
+K 13
+svn:mergeinfo
+V 88
+/dev/3g/soa-center/branches/default:121338-132860
+/dev/3g/soa-center/trunk:107368-132861
+END

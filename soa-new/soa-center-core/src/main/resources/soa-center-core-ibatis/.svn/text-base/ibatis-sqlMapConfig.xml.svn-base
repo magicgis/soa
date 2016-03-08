@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+		PUBLIC "-//ibatis.apache.org//DTD Config 3.0//EN"
+		"http://ibatis.apache.org/dtd/ibatis-3-config.dtd">
+<configuration>
+
+	<!-- These settings control SqlMapClient configuration details, primarily
+		to do with transaction management -->
+	<settings>
+		<setting name="cacheEnabled" value="true" />
+		<setting name="lazyLoadingEnabled" value="false" />
+		<setting name="aggressiveLazyLoading" value="false" />
+		<setting name="multipleResultSetsEnabled" value="true" />
+		<setting name="useColumnLabel" value="true" />
+		<setting name="useGeneratedKeys" value="false" />
+		<setting name="defaultExecutorType" value="SIMPLE" />
+		<setting name="defaultStatementTimeout" value="25000" />
+	</settings>
+
+	<typeAliases>
+		<typeAlias alias="AppDependency"
+			type="com.yeepay.g3.core.soa.center.entity.AppDependency" />
+		<typeAlias alias="AppInfo"
+			type="com.yeepay.g3.core.soa.center.entity.AppInfo" />
+		<typeAlias alias="AppOwner"
+			type="com.yeepay.g3.core.soa.center.entity.AppOwner" />
+		<typeAlias alias="AppUpgradeInfo"
+			type="com.yeepay.g3.core.soa.center.entity.AppUpgradeInfo" />
+		<typeAlias alias="MethodInfo"
+			type="com.yeepay.g3.core.soa.center.entity.MethodInfo" />
+		<typeAlias alias="ServiceInfo"
+			type="com.yeepay.g3.core.soa.center.entity.ServiceInfo" />
+
+		<typeAlias alias="MonitorData"
+			type="com.yeepay.g3.core.soa.center.entity.MonitorData" />
+		<typeAlias alias="MonitorDataQueryVO"
+			type="com.yeepay.g3.facade.soa.center.dto.MonitorDataQueryVO" />
+		<typeAlias alias="MonitorStatisticsDataDTO"
+			type="com.yeepay.g3.facade.soa.center.dto.MonitorStatisticsDataDTO" />
+		<typeAlias alias="MonitorChartData"
+			type="com.yeepay.g3.core.soa.center.entity.MonitorChartData" />
+
+		<typeAlias alias="Address"
+			type="com.yeepay.g3.core.soa.center.entity.Address" />
+		<typeAlias alias="AppAddress"
+			type="com.yeepay.g3.core.soa.center.entity.AppAddress" />
+		<typeAlias alias="Network"
+			type="com.yeepay.g3.core.soa.center.entity.Network" />
+		<typeAlias alias="DeployRecord"
+			type="com.yeepay.g3.core.soa.center.entity.DeployRecord" />
+	</typeAliases>
+</configuration>

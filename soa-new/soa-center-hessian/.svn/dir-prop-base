@@ -1,0 +1,16 @@
+K 10
+svn:ignore
+V 19
+*.iml
+.idea
+target
+
+K 13
+svn:mergeinfo
+V 338
+/dev/3g/dubbo/branches/default/dubbo-hessian:91419-93690
+/dev/3g/soa-center/branches/default-new/soa-center-hessian:107368-166897
+/dev/3g/soa-center/branches/default/dubbo-hessian:93691-93745
+/dev/3g/soa-center/branches/default/soa-center-hessian:93746-102228,121338-130473
+/dev/3g/soa-center/trunk/soa-center-hessian:107368-182632,183704
+END

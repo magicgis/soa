@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/YeePay/!svn/ver/182418/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/resources/soa-center-core-ibatis/sqlmap
+END
+MonitorData.xml
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/YeePay/!svn/ver/107378/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/resources/soa-center-core-ibatis/sqlmap/MonitorData.xml
+END
+AppUpgradeInfo.xml
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/resources/soa-center-core-ibatis/sqlmap/AppUpgradeInfo.xml
+END
+Address.xml
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/resources/soa-center-core-ibatis/sqlmap/Address.xml
+END
+AppAddress.xml
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/resources/soa-center-core-ibatis/sqlmap/AppAddress.xml
+END
+Network.xml
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/resources/soa-center-core-ibatis/sqlmap/Network.xml
+END
+AppOwner.xml
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/YeePay/!svn/ver/107378/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/resources/soa-center-core-ibatis/sqlmap/AppOwner.xml
+END
+DeployRecord.xml
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/YeePay/!svn/ver/182418/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/resources/soa-center-core-ibatis/sqlmap/DeployRecord.xml
+END
+AppInfo.xml
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/resources/soa-center-core-ibatis/sqlmap/AppInfo.xml
+END
+MethodInfo.xml
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/resources/soa-center-core-ibatis/sqlmap/MethodInfo.xml
+END
+ServiceInfo.xml
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/resources/soa-center-core-ibatis/sqlmap/ServiceInfo.xml
+END
+AppDependency.xml
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/resources/soa-center-core-ibatis/sqlmap/AppDependency.xml
+END

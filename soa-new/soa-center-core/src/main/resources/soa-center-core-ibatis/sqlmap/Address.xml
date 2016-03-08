@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Address">
+
+	<resultMap type="Address" id="addressMap">
+		<id property="id" column="ID" />
+		<id property="address" column="ADDRESS" />
+		<id property="environment" column="ENVIRONMENT" />
+		<id property="status" column="STATUS" />
+		<id property="role" column="ROLE" />
+		<id property="createDate" column="CREATE_DATE" />
+		<id property="lastModifyDate" column="LAST_MODIFY_DATE" />
+	</resultMap>
+
+	<insert id="insert" parameterType="Address" keyProperty="id"
+		useGeneratedKeys="true">
+	INSERT INTO TBL_SOA_ADDRESS
+	(
+		ADDRESS,
+		ENVIRONMENT,
+		STATUS,
+		ROLE,
+		CREATE_DATE,
+		LAST_MODIFY_DATE
+	) VALUES (
+		#{address,jdbcType=VARCHAR},
+		#{environment,jdbcType=VARCHAR},
+		#{status,jdbcType=VARCHAR},
+		#{role,jdbcType=VARCHAR},
+		CURRENT_TIMESTAMP,
+		CURRENT_TIMESTAMP
+	)
+	</insert>
+
+	<insert id="batchInsert" parameterType="Address">
+	INSERT INTO TBL_SOA_ADDRESS
+	(
+		ADDRESS,
+		ENVIRONMENT,
+		STATUS,
+		ROLE,
+		CREATE_DATE,
+		LAST_MODIFY_DATE
+	) VALUES (
+		#{address,jdbcType=VARCHAR},
+		#{environment,jdbcType=VARCHAR},
+		#{status,jdbcType=VARCHAR},
+		#{role,jdbcType=VARCHAR},
+		CURRENT_TIMESTAMP,
+		CURRENT_TIMESTAMP
+	)
+	</insert>
+
+	<select id="get" parameterType="Long" resultMap="addressMap">
+		SELECT * FROM TBL_SOA_ADDRESS WHERE ID = #{id}
+	</select>
+
+	<select id="find" parameterType="Map" resultMap="addressMap">
+		SELECT * FROM TBL_SOA_ADDRESS WHERE ADDRESS = #{address} FETCH FIRST 1 ROWS ONLY
+	</select>
+
+	<select id="queryAddress" parameterType="String" resultMap="addressMap">
+		SELECT * FROM TBL_SOA_ADDRESS WHERE ADDRESS LIKE '%' || #{address} || '%' WITH UR
+	</select>
+
+	<select id="queryByApp" parameterType="String" resultMap="addressMap">
+		SELECT A.* FROM TBL_SOA_ADDRESS A, TBL_SOA_APP_ADDRESS AA WHERE A.ADDRESS = AA.ADDRESS AND AA.APP_NAME = #{appName} WITH UR
+	</select>
+
+	<delete id="delete" parameterType="long">
+		DELETE FROM TBL_SOA_ADDRESS WHERE ID = #{id}
+	</delete>
+
+	<delete id="deleteAddress" parameterType="String">
+		DELETE FROM TBL_SOA_ADDRESS WHERE ADDRESS = #{address}
+	</delete>
+
+	<delete id="deleteAll" parameterType="String">
+		DELETE FROM TBL_SOA_ADDRESS WHERE ADDRESS LIKE #{address} || '%'
+	</delete>
+
+	<update id="batchChangeStatus" parameterType="Map">
+		UPDATE TBL_SOA_ADDRESS SET STATUS = #{toStatus} WHERE STATUS = #{fromStatus}
+	</update>
+	<update id="update" parameterType="Address">
+		UPDATE TBL_SOA_ADDRESS
+		SET
+			<if test="environment != null">ENVIRONMENT = #{environment,jdbcType=VARCHAR},</if>
+			<if test="status != null">STATUS = #{status,jdbcType=VARCHAR},</if>
+			<if test="role != null">ROLE = #{role,jdbcType=VARCHAR},</if>
+			LAST_MODIFY_DATE = CURRENT_TIMESTAMP
+		WHERE ID = #{id}
+	</update>
+</mapper>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="soaQueryService" class="com.yeepay.g3.utils.query.impl.QueryServiceImpl">
+		<property name="dataSource" ref="soaDataSource"/>
+		<property name="querys">
+			<map>
+				<entry key="monitorData">
+					<bean class="com.yeepay.g3.utils.query.Query">
+						<property name="sql">
+							<value>
+								<![CDATA[
+								SELECT *
+									FROM SOA_GOV.TBL_SOA_MONITOR_DATA
+								WHERE 0 = 1
+									/~dateStr: OR DATESTR = {dateStr,string}~/
+									/~service: AND SERVICE = {service,string}~/
+									/~method: AND METHOD = {method,string}~/
+									/~serviceType: AND TYPE = {serviceType,string}~/
+									/~providerIp: AND PROVIDER = {providerIp,string}~/
+									/~consumerIp: AND CONSUMER = {consumerIp,string}~/
+								ORDER BY ID DESC
+								WITH UR
+								]]>
+							</value>
+						</property>
+						<property name="queryWithoutParam" value="false"/>
+					</bean>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+</beans>

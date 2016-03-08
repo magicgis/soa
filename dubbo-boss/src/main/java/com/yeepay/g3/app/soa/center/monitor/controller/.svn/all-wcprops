@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/YeePay/!svn/ver/161447/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/monitor/controller
+END
+ServicesMonitorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/YeePay/!svn/ver/115384/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/monitor/controller/ServicesMonitorController.java
+END
+ApplicationsMonitorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/YeePay/!svn/ver/104626/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/monitor/controller/ApplicationsMonitorController.java
+END
+DependenciesMonitorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/YeePay/!svn/ver/104626/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/monitor/controller/DependenciesMonitorController.java
+END
+NetworkMonitorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/YeePay/!svn/ver/104626/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/monitor/controller/NetworkMonitorController.java
+END
+ServersMonitorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/YeePay/!svn/ver/107660/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/monitor/controller/ServersMonitorController.java
+END
+HealthCheckController.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/YeePay/!svn/ver/161447/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/monitor/controller/HealthCheckController.java
+END
+DashboadController.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/YeePay/!svn/ver/150961/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/monitor/controller/DashboadController.java
+END
+RegistriesMonitorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/YeePay/!svn/ver/107660/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/monitor/controller/RegistriesMonitorController.java
+END

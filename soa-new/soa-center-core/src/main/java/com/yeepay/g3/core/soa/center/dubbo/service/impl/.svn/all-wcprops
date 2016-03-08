@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/YeePay/!svn/ver/143907/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/dubbo/service/impl
+END
+RouteServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/YeePay/!svn/ver/143907/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/dubbo/service/impl/RouteServiceImpl.java
+END
+UserServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/dubbo/service/impl/UserServiceImpl.java
+END
+OverrideServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/YeePay/!svn/ver/109568/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/dubbo/service/impl/OverrideServiceImpl.java
+END
+AbstractService.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/dubbo/service/impl/AbstractService.java
+END
+OwnerServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/dubbo/service/impl/OwnerServiceImpl.java
+END
+ProviderServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/dubbo/service/impl/ProviderServiceImpl.java
+END
+ConsumerServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/dubbo/service/impl/ConsumerServiceImpl.java
+END

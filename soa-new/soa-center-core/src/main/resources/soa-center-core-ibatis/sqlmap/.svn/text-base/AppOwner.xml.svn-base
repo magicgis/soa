@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="AppOwner">
+
+    <resultMap type="AppOwner" id="appOwnerMap">
+        <id property="id" column="ID"/>
+        <id property="appName" column="APP_NAME"/>
+        <id property="loginName" column="LOGIN_NAME"/>
+        <id property="ownerName" column="OWNER_NAME"/>
+        <id property="createDate" column="CREATE_DATE"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="AppOwner" keyProperty="id"
+            useGeneratedKeys="true">
+	INSERT INTO TBL_SOA_APP_OWNER
+	(
+		APP_NAME,
+		LOGIN_NAME,
+		OWNER_NAME,
+		CREATE_DATE
+	) VALUES (
+		#{appName,jdbcType=VARCHAR},
+		#{loginName,jdbcType=VARCHAR},
+		#{ownerName,jdbcType=VARCHAR},
+		CURRENT_TIMESTAMP
+	)
+	</insert>
+
+    <insert id="batchInsert" parameterType="AppOwner">
+        INSERT INTO TBL_SOA_APP_OWNER
+        (
+        APP_NAME,
+        LOGIN_NAME,
+        OWNER_NAME,
+        CREATE_DATE
+        ) VALUES (
+        #{appName,jdbcType=VARCHAR},
+        #{loginName,jdbcType=VARCHAR},
+        #{ownerName,jdbcType=VARCHAR},
+        CURRENT_TIMESTAMP
+        )
+    </insert>
+
+    <select id="get" parameterType="Long" resultMap="appOwnerMap">
+		SELECT * FROM TBL_SOA_APP_OWNER WHERE ID = #{id}
+	</select>
+    <select id="getAll" parameterType="Long" resultMap="appOwnerMap">
+		SELECT * FROM TBL_SOA_APP_OWNER WITH UR
+	</select>
+
+    <select id="queryByApp" parameterType="String" resultMap="appOwnerMap">
+		SELECT * FROM TBL_SOA_APP_OWNER WHERE APP_NAME = #{appName} WITH UR
+	</select>
+
+    <select id="queryByOwner" parameterType="String" resultMap="appOwnerMap">
+		SELECT * FROM TBL_SOA_APP_OWNER WHERE LOGIN_NAME = #{loginName} OR OWNER_NAME = #{ownerName} WITH UR
+	</select>
+
+    <select id="queryByDepAppName" parameterType="java.util.Map" resultMap="appOwnerMap">
+		SELECT O.*
+		FROM TBL_SOA_APP_OWNER  O
+	      LEFT OUTER JOIN TBL_SOA_APP_DEPENDENCY D
+	      ON O.APP_NAME=D.APP_NAME
+		WHERE D.DEP_APP_NAME=#{depAppName}
+		WITH UR
+	</select>
+
+
+    <delete id="delete" parameterType="long">
+		DELETE FROM TBL_SOA_APP_OWNER WHERE ID = #{id}
+	</delete>
+
+    <delete id="deleteAllByApp" parameterType="String">
+		DELETE FROM TBL_SOA_APP_OWNER WHERE APP_NAME = #{appName}
+	</delete>
+
+    <delete id="deleteAllByLoginName" parameterType="String">
+        DELETE FROM TBL_SOA_APP_OWNER WHERE LOGIN_NAME = #{loginName}
+    </delete>
+
+    <delete id="deleteAllByOwner" parameterType="String">
+		DELETE FROM TBL_SOA_APP_OWNER WHERE LOGIN_NAME = #{loginName}
+	</delete>
+</mapper>

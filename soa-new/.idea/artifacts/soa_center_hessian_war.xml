@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="soa-center-hessian:war">
+    <output-path>$PROJECT_DIR$/soa-center-hessian/target</output-path>
+    <root id="archive" name="soa-center-hessian.war">
+      <element id="artifact" artifact-name="soa-center-hessian:war exploded" />
+    </root>
+  </artifact>
+</component>

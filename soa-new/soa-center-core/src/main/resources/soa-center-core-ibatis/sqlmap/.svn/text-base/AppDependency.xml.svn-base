@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="AppDependency">
+
+	<resultMap type="AppDependency" id="appDependencyMap">
+		<id property="id" column="ID" />
+		<id property="appName" column="APP_NAME" />
+		<id property="depAppName" column="DEP_APP_NAME" />
+		<id property="authStatus" column="AUTH_STATUS" />
+		<id property="createDate" column="CREATE_DATE" />
+		<id property="lastModifyDate" column="LAST_MODIFY_DATE" />
+	</resultMap>
+
+	<insert id="insert" parameterType="AppDependency" keyProperty="id"
+		useGeneratedKeys="true">
+	INSERT INTO TBL_SOA_APP_DEPENDENCY
+	(
+		APP_NAME,
+		DEP_APP_NAME,
+		AUTH_STATUS,
+		CREATE_DATE,
+		LAST_MODIFY_DATE
+	) VALUES (
+		#{appName,jdbcType=VARCHAR},
+		#{depAppName,jdbcType=VARCHAR},
+		#{authStatus,jdbcType=VARCHAR},
+		CURRENT_TIMESTAMP,
+		CURRENT_TIMESTAMP
+	)
+	</insert>
+
+	<insert id="batchInsert" parameterType="AppDependency">
+	INSERT INTO TBL_SOA_APP_DEPENDENCY
+	(
+		APP_NAME,
+		DEP_APP_NAME,
+		AUTH_STATUS,
+		CREATE_DATE,
+		LAST_MODIFY_DATE
+	) VALUES (
+		#{appName,jdbcType=VARCHAR},
+		#{depAppName,jdbcType=VARCHAR},
+		#{authStatus,jdbcType=VARCHAR},
+		CURRENT_TIMESTAMP,
+		CURRENT_TIMESTAMP
+	)
+	</insert>
+
+	<select id="get" parameterType="Long" resultMap="appDependencyMap">
+		SELECT * FROM TBL_SOA_APP_DEPENDENCY WHERE ID = #{id}
+	</select>
+
+	<select id="find" parameterType="Map" resultMap="appDependencyMap">
+		SELECT * FROM TBL_SOA_APP_DEPENDENCY WHERE APP_NAME = #{appName} AND DEP_APP_NAME = #{depAppName} FETCH FIRST 1 ROWS ONLY
+	</select>
+
+	<select id="queryDependency" parameterType="String" resultMap="appDependencyMap">
+		SELECT * FROM TBL_SOA_APP_DEPENDENCY WHERE APP_NAME = #{appName} ORDER BY ID DESC WITH UR
+	</select>
+
+	<select id="queryReference" parameterType="String" resultMap="appDependencyMap">
+		SELECT * FROM TBL_SOA_APP_DEPENDENCY WHERE DEP_APP_NAME = #{appName} ORDER BY ID DESC WITH UR
+	</select>
+
+	<delete id="delete" parameterType="long">
+		DELETE FROM TBL_SOA_APP_DEPENDENCY WHERE ID = #{id}
+	</delete>
+
+	<delete id="deleteAllByApp" parameterType="String">
+		DELETE FROM TBL_SOA_APP_DEPENDENCY WHERE APP_NAME = #{appName} OR DEP_APP_NAME = #{appName}
+	</delete>
+
+	<update id="update" parameterType="AppDependency">
+		UPDATE TBL_SOA_APP_DEPENDENCY
+		SET
+			AUTH_STATUS=#{authStatus,jdbcType=VARCHAR},
+			LAST_MODIFY_DATE = CURRENT_TIMESTAMP
+		WHERE ID = #{id}
+	</update>
+</mapper>

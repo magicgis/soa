@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://code.alibabatech.com/schema/dubbo
+	http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+	<dubbo:protocol name="hessianx" />
+	<!--
+	<bean id="registryServerSync" class="com.yeepay.g3.core.soa.center.dubbo.utils.sync.RegistryServerSync" />
+	-->
+	<dubbo:annotation package="com.yeepay.g3.core.soa" />
+	<dubbo:service interface="com.alibaba.dubbo.monitor.MonitorService" ref="monitorFacadeImpl" protocol="dubbo" />
+	<dubbo:service interface="com.yeepay.g3.utils.soa.service.NetworkMonitorService" ref="networkFacadeImpl" protocol="dubbo" />
+	<dubbo:service interface="com.yeepay.g3.utils.soa.service.SoaBizLogService" ref="soaBizLogFacadeImpl" protocol="dubbo" />
+	<dubbo:reference id="registryService" interface="com.alibaba.dubbo.registry.RegistryService" check="false" />
+</beans>

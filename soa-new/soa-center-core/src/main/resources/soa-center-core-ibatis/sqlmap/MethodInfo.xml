@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="MethodInfo">
+
+	<resultMap type="MethodInfo" id="methodInfoMap">
+		<id property="id" column="ID" />
+		<id property="serviceId" column="SERVICE_ID" />
+		<id property="methodName" column="METHOD_NAME" />
+		<id property="methodDesc" column="METHOD_DESC" />
+		<id property="methodSign" column="METHOD_SIGN" />
+		<id property="status" column="STATUS" />
+		<id property="createDate" column="CREATE_DATE" />
+		<id property="lastModifyDate" column="LAST_MODIFY_DATE" />
+	</resultMap>
+
+	<insert id="insert" parameterType="MethodInfo" keyProperty="id"
+		useGeneratedKeys="true">
+	INSERT INTO TBL_SOA_METHOD_INFO
+	(
+		SERVICE_ID,
+		METHOD_NAME,
+		METHOD_DESC,
+		METHOD_SIGN,
+		STATUS,
+		CREATE_DATE,
+		LAST_MODIFY_DATE
+	) VALUES (
+		#{serviceId,jdbcType=BIGINT},
+		#{methodName,jdbcType=VARCHAR},
+		#{methodDesc,jdbcType=VARCHAR},
+		#{methodSign,jdbcType=VARCHAR},
+		#{status,jdbcType=VARCHAR},
+		CURRENT_TIMESTAMP,
+		CURRENT_TIMESTAMP
+	)
+	</insert>
+
+	<select id="get" parameterType="Long" resultMap="methodInfoMap">
+		SELECT * FROM TBL_SOA_METHOD_INFO WHERE ID = #{id}
+	</select>
+
+	<select id="find" parameterType="Map" resultMap="methodInfoMap">
+		SELECT * FROM
+			TBL_SOA_METHOD_INFO
+		WHERE SERVICE_ID = #{serviceId,jdbcType=BIGINT}
+		AND METHOD_NAME = #{methodName,jdbcType=VARCHAR}
+		FETCH FIRST 1 ROWS ONLY
+	</select>
+
+	<select id="queryByServiceId" parameterType="Long" resultMap="methodInfoMap">
+		SELECT M.* FROM TBL_SOA_METHOD_INFO M
+		WHERE M.SERVICE_ID = #{serviceId,jdbcType=BIGINT}
+		WITH UR
+	</select>
+
+	<select id="queryByServiceName" parameterType="String" resultMap="methodInfoMap">
+		SELECT M.* FROM TBL_SOA_METHOD_INFO M,
+			TBL_SOA_SERVICE_INFO S
+		WHERE M.SERVICE_ID = S.ID
+			AND S.SERVICE_INTERFACE_LOWCASE = #{serviceName,jdbcType=VARCHAR}
+		WITH UR
+	</select>
+
+	<delete id="delete" parameterType="Long">
+		DELETE FROM TBL_SOA_METHOD_INFO WHERE ID = #{id}
+	</delete>
+
+	<update id="changeStatus" parameterType="Map">
+		UPDATE TBL_SOA_METHOD_INFO SET STATUS = #{status} WHERE ID = #{id}
+	</update>
+
+	<update id="batchChangeStatus" parameterType="Map">
+		UPDATE TBL_SOA_METHOD_INFO SET STATUS = #{toStatus} WHERE STATUS = #{fromStatus}
+	</update>
+
+	<update id="changeStatusByApp" parameterType="Map">
+		UPDATE TBL_SOA_METHOD_INFO M SET M.STATUS = #{status}
+		WHERE EXISTS (
+			SELECT * FROM TBL_SOA_SERVICE_INFO S
+			WHERE S.ID = M.SERVICE_ID
+			AND S.APP_NAME = #{appName}
+			)
+	</update>
+
+	<update id="update" parameterType="MethodInfo">
+		UPDATE TBL_SOA_METHOD_INFO
+		<set>
+			<if test="methodDesc != null">METHOD_DESC = #{methodDesc,jdbcType=VARCHAR},</if>
+			<if test="methodSign != null">METHOD_SIGN = #{methodSign,jdbcType=VARCHAR},</if>
+			<if test="status != null">STATUS = #{status,jdbcType=VARCHAR},</if>
+			LAST_MODIFY_DATE = CURRENT_TIMESTAMP
+		</set>
+		WHERE ID = #{id}
+	</update>
+</mapper>

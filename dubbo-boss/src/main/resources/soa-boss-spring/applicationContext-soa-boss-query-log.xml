@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="logQueryService" class="com.yeepay.g3.utils.query.impl.QueryServiceImpl">
+		<property name="dataSource" ref="logDataSource"/>
+		<property name="querys">
+			<map>
+				<entry key="queryBizLog">
+					<bean class="com.yeepay.g3.utils.query.Query">
+						<property name="sql">
+							<value>
+								<![CDATA[
+								SELECT * FROM TBL_COMMON_BIZ_LOG
+								WHERE 1 = 1
+									/~host: AND HOST = {host,string}~/
+									/~application: AND APPLICATION = {application,string}~/
+									/~guid: AND GUID = {guid,string}~/
+									/~loggerName: AND LOGGER_NAME LIKE '%' || {loggerName,string} || '%'~/
+									/~keyword: AND LOG_CONTENT LIKE '%' || {keyword,string} || '%'~/
+									/~createTimeStart: AND CREATE_TIME >= {createTimeStart,mintimestamp}~/
+									/~createTimeEnd: AND CREATE_TIME < {createTimeEnd,nexttimestamp}~/
+								ORDER BY CREATE_TIME DESC
+								]]>
+							</value>
+						</property>
+					</bean>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+</beans>

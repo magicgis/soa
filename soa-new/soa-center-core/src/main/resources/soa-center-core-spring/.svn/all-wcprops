@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/YeePay/!svn/ver/183359/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/resources/soa-center-core-spring
+END
+applicationContext-soa-provider.xml
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/YeePay/!svn/ver/166110/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/resources/soa-center-core-spring/applicationContext-soa-provider.xml
+END
+applicationContext-soa-center-service.xml
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/YeePay/!svn/ver/182418/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/resources/soa-center-core-spring/applicationContext-soa-center-service.xml
+END
+applicationContext-soa-center-rabbitmq.xml
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/YeePay/!svn/ver/133423/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/resources/soa-center-core-spring/applicationContext-soa-center-rabbitmq.xml
+END
+applicationContext-soa-center-dao-log.xml
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/YeePay/!svn/ver/109738/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/resources/soa-center-core-spring/applicationContext-soa-center-dao-log.xml
+END
+applicationContext-soa-center.xml
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/YeePay/!svn/ver/166886/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/resources/soa-center-core-spring/applicationContext-soa-center.xml
+END
+applicationContext-soa-center-dao.xml
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/YeePay/!svn/ver/182418/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/resources/soa-center-core-spring/applicationContext-soa-center-dao.xml
+END
+applicationContext-soa-center-biz.xml
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/YeePay/!svn/ver/107378/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/resources/soa-center-core-spring/applicationContext-soa-center-biz.xml
+END
+applicationContext-soa-center-query.xml
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/YeePay/!svn/ver/183359/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/resources/soa-center-core-spring/applicationContext-soa-center-query.xml
+END
+applicationContext-soa-center-datasource.xml
+K 25
+svn:wc:ra_dav:version-url
+V 165
+/YeePay/!svn/ver/107378/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/resources/soa-center-core-spring/applicationContext-soa-center-datasource.xml
+END

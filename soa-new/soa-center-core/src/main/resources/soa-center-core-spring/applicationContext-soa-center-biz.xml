@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-autowire="byName">
+
+	<!-- 缓存拦截器 -->
+	<bean id="cacheInterceptor" class="com.yeepay.g3.utils.cache.config.CacheInterceptor" />
+	<bean id="cacheProxyCreator"
+		class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+		<property name="order" value="1"></property>
+		<property name="interceptorNames">
+			<list>
+				<value>cacheInterceptor</value>
+			</list>
+		</property>
+		<property name="beanNames">
+			<list>
+				<value>*Service</value>
+			</list>
+		</property>
+	</bean>
+</beans>

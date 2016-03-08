@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/YeePay/!svn/ver/119577/dev/app/dubbo-boss/branches/default/src/main/resources/runtimecfg
+END
+initcomponents.properties
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/YeePay/!svn/ver/119577/dev/app/dubbo-boss/branches/default/src/main/resources/runtimecfg/initcomponents.properties
+END
+memcached.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/YeePay/!svn/ver/119577/dev/app/dubbo-boss/branches/default/src/main/resources/runtimecfg/memcached.xml
+END
+yeepay-config.properties
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/YeePay/!svn/ver/101095/dev/app/dubbo-boss/branches/default/src/main/resources/runtimecfg/yeepay-config.properties
+END
+log4j.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/YeePay/!svn/ver/88303/dev/app/dubbo-boss/branches/default/src/main/resources/runtimecfg/log4j.xml
+END

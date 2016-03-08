@@ -1,0 +1,139 @@
+package com.yeepay.g3.app.soa.center.controller;
+
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
+
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import com.alibaba.dubbo.config.annotation.Reference;
+import com.yeepay.g3.facade.employee.user.dto.UserDTO;
+import com.yeepay.g3.facade.soa.center.dubbo.domain.LoadBalance;
+import com.yeepay.g3.facade.soa.center.facade.LoadBalanceFacade;
+import com.yeepay.g3.facade.soa.center.facade.ProviderFacade;
+import com.yeepay.g3.utils.common.exception.YeepayRuntimeException;
+
+/**
+ * Title: 负载均衡 控制器<br/>
+ * Description: 描述<br/>
+ * Copyright: Copyright (c)2011<br/>
+ * Company: 易宝支付(YeePay)<br/><br/>
+ *
+ * @author baitao.ji
+ * @version 0.1, 14-8-21 16:34
+ */
+@Controller
+@RequestMapping("/loadbalances")
+public class LoadBalancesController extends BaseController {
+
+	@Reference
+	private LoadBalanceFacade loadBalanceFacade;
+
+	@Reference
+	private ProviderFacade providerFacade;
+
+	@RequestMapping(value = {"", "/list"}, method = RequestMethod.GET)
+	public String list(@RequestParam(value = "service", required = false) String service,
+					   Model model) {
+		List<LoadBalance> loadBalances;
+		if (service != null && service.length() > 0) {
+			loadBalances = loadBalanceFacade.findByService(service);
+		} else {
+			loadBalances = loadBalanceFacade.findAll();
+		}
+
+		model.addAttribute("serviceList", providerFacade.findServicesSorted());
+		model.addAttribute("loadbalances", loadBalances);
+
+		if (blockModel) {
+			return "loadbalances/control/listControl";
+		} else {
+			return "loadbalances/list";
+		}
+	}
+
+	@RequestMapping(value = "/add", method = RequestMethod.GET)
+	public String addForm(Model model) {
+		LoadBalance loadBalance = new LoadBalance();
+		loadBalance.setMethod("*");
+		model.addAttribute("loadbalance", loadBalance);
+		model.addAttribute("method", "add");
+		model.addAttribute("applications", providerFacade.findApplications());
+		model.addAttribute("serviceList", providerFacade.findServicesSorted());
+		return "loadbalances/add";
+	}
+
+	@RequestMapping(value = "/add", method = RequestMethod.POST)
+	public String add(@RequestParam(value = "providerApplication", required = false) String providerApplication,
+					  LoadBalance loadBalance,
+					  HttpSession session,
+					  RedirectAttributes redirectAttributes) {
+		try {
+			UserDTO userDTO = (UserDTO) session.getAttribute("yeepay_session_user");
+
+			// 如果指定应用但没有指定具体服务，则将动态配置应用到该应用的所有服务
+			if (StringUtils.isNotBlank(providerApplication)
+					&& StringUtils.isBlank(loadBalance.getService())) {
+				List<String> services = providerFacade.findServicesByApplication(providerApplication);
+				for (String service : services) {
+					loadBalance.setService(service);
+					loadBalanceFacade.create(loadBalance, userDTO.getLoginName());
+				}
+			} else {
+				loadBalanceFacade.create(loadBalance, userDTO.getLoginName());
+			}
+			redirectAttributes.addFlashAttribute("info", "成功添加访问");
+		} catch (Exception e) {
+			throw new YeepayRuntimeException(e.getMessage());
+		}
+		return "redirect:/loadbalances/list";
+	}
+
+	@RequestMapping(value = "/edit", method = RequestMethod.GET)
+	public String editForm(Model model) {
+		model.addAttribute("method", "edit");
+		model.addAttribute("serviceList", providerFacade.findServicesSorted());
+		return "loadbalances/add";
+	}
+
+	@RequestMapping(value = "/edit", method = RequestMethod.POST)
+	public String edit(@ModelAttribute("loadbalance") LoadBalance loadBalance,
+					   HttpSession session,
+					   RedirectAttributes redirectAttributes) {
+		try {
+			UserDTO userDTO = (UserDTO) session.getAttribute("yeepay_session_user");
+			loadBalanceFacade.edit(loadBalance, userDTO.getLoginName());
+			redirectAttributes.addFlashAttribute("info", "成功添加访问");
+		} catch (Exception e) {
+			throw new YeepayRuntimeException(e.getMessage());
+		}
+		return "redirect:/loadbalances/list";
+	}
+
+	@ResponseBody
+	@ResponseStatus(value = HttpStatus.OK)
+	@RequestMapping(value = "/delete", method = RequestMethod.POST)
+	public void delete(@RequestParam("id") Long[] ids,
+					   HttpSession session) {
+		UserDTO userDTO = (UserDTO) session.getAttribute("yeepay_session_user");
+		loadBalanceFacade.delete(ids, userDTO.getLoginName());
+	}
+
+	@ModelAttribute
+	public void getLoadBalance(@RequestParam(value = "id", required = false) Long id, Model model) {
+		if (null != id) {
+			model.addAttribute("loadbalance", loadBalanceFacade.findOne(id));
+		}
+	}
+
+}

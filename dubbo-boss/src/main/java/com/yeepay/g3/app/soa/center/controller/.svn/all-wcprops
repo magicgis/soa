@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/YeePay/!svn/ver/183360/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/controller
+END
+OverridesController.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/YeePay/!svn/ver/183360/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/controller/OverridesController.java
+END
+RegistryController.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/YeePay/!svn/ver/104626/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/controller/RegistryController.java
+END
+NotifyController.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/YeePay/!svn/ver/104626/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/controller/NotifyController.java
+END
+LoadBalancesController.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/YeePay/!svn/ver/104626/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/controller/LoadBalancesController.java
+END
+BaseController.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/YeePay/!svn/ver/107181/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/controller/BaseController.java
+END
+UpgradesController.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/YeePay/!svn/ver/104626/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/controller/UpgradesController.java
+END
+WeightsController.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/YeePay/!svn/ver/104626/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/controller/WeightsController.java
+END
+ProvidersController.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/YeePay/!svn/ver/104626/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/controller/ProvidersController.java
+END
+OwnersController.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/YeePay/!svn/ver/104626/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/controller/OwnersController.java
+END
+GeneralController.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/YeePay/!svn/ver/98195/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/controller/GeneralController.java
+END
+AddressesController.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/YeePay/!svn/ver/183360/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/controller/AddressesController.java
+END
+ConsumersController.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/YeePay/!svn/ver/104626/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/controller/ConsumersController.java
+END
+RoutesController.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/YeePay/!svn/ver/115884/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/controller/RoutesController.java
+END
+ServicesController.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/YeePay/!svn/ver/104626/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/controller/ServicesController.java
+END
+BizLogController.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/YeePay/!svn/ver/107417/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/controller/BizLogController.java
+END
+ApplicationsController.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/YeePay/!svn/ver/119577/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/controller/ApplicationsController.java
+END
+ConfigsController.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/YeePay/!svn/ver/107538/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/controller/ConfigsController.java
+END
+AccessesController.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/YeePay/!svn/ver/104626/dev/app/dubbo-boss/branches/default/src/main/java/com/yeepay/g3/app/soa/center/controller/AccessesController.java
+END

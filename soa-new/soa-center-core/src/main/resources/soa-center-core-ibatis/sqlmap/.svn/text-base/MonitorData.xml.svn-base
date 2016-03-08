@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yeepay.g3.core.soa.center.dao.MonitorDataDao">
+
+	<resultMap type="MonitorData" id="monitorDataMap">
+		<id property="id" column="ID"/>
+		<id property="dateStr" column="DATESTR"/>
+		<id property="service" column="SERVICE"/>
+		<id property="method" column="METHOD"/>
+		<id property="type" column="TYPE"/>
+		<id property="consumer" column="CONSUMER"/>
+		<id property="provider" column="PROVIDER"/>
+		<id property="success" column="SUCCESS"/>
+		<id property="failure" column="FAILURE"/>
+		<id property="elapsed" column="ELAPSED"/>
+		<id property="concurrent" column="CONCURRENT"/>
+		<id property="maxElapsed" column="MAX_ELAPSED"/>
+		<id property="maxConcurrent" column="MAX_CONCURRENT"/>
+		<id property="createDate" column="CREATE_DATE"/>
+	</resultMap>
+
+	<insert id="insert" parameterType="MonitorData" keyProperty="id" useGeneratedKeys="true">
+		INSERT INTO TBL_SOA_MONITOR_DATA
+		(
+		DATESTR,
+		SERVICE,
+		METHOD,
+		TYPE,
+		CONSUMER,
+		PROVIDER,
+		SUCCESS,
+		FAILURE,
+		ELAPSED,
+		CONCURRENT,
+		MAX_ELAPSED,
+		MAX_CONCURRENT,
+		CREATE_DATE
+		) VALUES (
+		#{dateStr,jdbcType=VARCHAR},
+		#{service,jdbcType=VARCHAR},
+		#{method,jdbcType=VARCHAR},
+		#{type,jdbcType=VARCHAR},
+		#{consumer,jdbcType=VARCHAR},
+		#{provider,jdbcType=VARCHAR},
+		#{success,jdbcType=BIGINT},
+		#{failure,jdbcType=BIGINT},
+		#{elapsed,jdbcType=BIGINT},
+		#{concurrent,jdbcType=BIGINT},
+		#{maxElapsed,jdbcType=BIGINT},
+		#{maxConcurrent,jdbcType=BIGINT},
+		CURRENT_TIMESTAMP
+		)
+	</insert>
+
+	<resultMap type="MonitorStatisticsDataDTO" id="monitorStatisticsDataMap">
+		<id property="method" column="METHOD"/>
+		<id property="type" column="TYPE"/>
+		<id property="success" column="SUCCESS"/>
+		<id property="failure" column="FAILURE"/>
+		<id property="elapsed" column="ELAPSED"/>
+		<id property="concurrent" column="CONCURRENT"/>
+		<id property="maxElapsed" column="MAX_ELAPSED"/>
+		<id property="maxConcurrent" column="MAX_CONCURRENT"/>
+	</resultMap>
+
+	<select id="lookupStatisticsData" parameterType="MonitorDataQueryVO" resultMap="monitorStatisticsDataMap">
+		SELECT SERVICE,METHOD,
+		<choose>
+			<when test="null != queryVO.type and queryVO.type == 'provider'">
+				PROVIDER,
+			</when>
+			<when test="null != queryVO.type and queryVO.type == 'consumer'">
+				CONSUMER,
+			</when>
+		</choose>
+		SUM(SUCCESS) AS SUCCESS,SUM(FAILURE) AS FAILURE,AVG(ELAPSED) AS ELAPSED,MAX(MAX_ELAPSED) AS
+		MAX_ELAPSED,AVG(CONCURRENT) AS CONCURRENT,MAX(MAX_CONCURRENT) AS MAX_CONCURRENT
+		FROM SOA_GOV.TBL_SOA_MONITOR_DATA
+		<where>
+			1 = 1
+			<if test="null != queryVO.service and queryVO.service != ''">
+				AND SERVICE = #{queryVO.service}
+			</if>
+			<choose>
+				<when test="null != queryVO.endDate and queryVO.endDate != ''">
+					AND DATESTR >= #{queryVO.startDate} AND #{queryVO.endDate} >= DATESTR
+				</when>
+				<otherwise>
+					AND DATESTR = #{queryVO.startDate}
+				</otherwise>
+			</choose>
+		</where>
+		GROUP BY SERVICE,METHOD
+		<choose>
+			<when test="null != queryVO.type and queryVO.type == 'provider'">
+				,PROVIDER
+			</when>
+			<when test="null != queryVO.type and queryVO.type == 'consumer'">
+				,CONSUMER
+			</when>
+		</choose>
+	</select>
+
+	<resultMap type="MonitorChartData" id="monitorChartDataMap">
+		<id property="method" column="METHOD"/>
+		<id property="type" column="TYPE"/>
+		<id property="time" column="TIME1"/>
+		<id property="qps" column="QPS"/>
+		<id property="elapsed" column="ELAPSED"/>
+	</resultMap>
+
+	<select id="lookupChartData" parameterType="MonitorDataQueryVO" resultMap="monitorChartDataMap">
+		SELECT SERVICE,METHOD,TYPE,round(BIGINT(CREATE_DATE)/100/5*5) AS TIME1,COUNT(1) AS QPS,AVG(ELAPSED) AS ELAPSED
+		FROM SOA_GOV.TBL_SOA_MONITOR_DATA
+		WHERE DATESTR = #{queryVO.startDate} AND SERVICE = #{queryVO.service} AND ELAPSED > 0
+		GROUP BY SERVICE,METHOD,TYPE,round(BIGINT(CREATE_DATE)/100/5*5)
+		ORDER BY METHOD
+	</select>
+
+</mapper>

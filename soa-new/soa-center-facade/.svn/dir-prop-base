@@ -1,0 +1,14 @@
+K 10
+svn:ignore
+V 6
+*.iml
+
+K 13
+svn:mergeinfo
+V 326
+/dev/3g/dubbo/branches/default/dubbo-facade:91419-93690
+/dev/3g/soa-center/branches/default/dubbo-facade:93691-93744
+/dev/3g/soa-center/branches/default/soa-center-facade:93745-102228,121338-130473
+/dev/3g/soa-center/branches/default-new/soa-center-facade:107368-107374
+/dev/3g/soa-center/trunk/soa-center-facade:107368-182632
+END

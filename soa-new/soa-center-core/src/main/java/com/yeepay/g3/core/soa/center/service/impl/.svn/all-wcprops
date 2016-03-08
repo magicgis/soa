@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/YeePay/!svn/ver/182418/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/service/impl
+END
+AppInfoServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/service/impl/AppInfoServiceImpl.java
+END
+ServiceInfoServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/service/impl/ServiceInfoServiceImpl.java
+END
+AddressInfoServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/service/impl/AddressInfoServiceImpl.java
+END
+DeployRecoverServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 165
+/YeePay/!svn/ver/182418/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/service/impl/DeployRecoverServiceImpl.java
+END
+AppUpgradeInfoServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/service/impl/AppUpgradeInfoServiceImpl.java
+END
+NetworkServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/YeePay/!svn/ver/107378/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/service/impl/NetworkServiceImpl.java
+END
+AppOwnerServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/YeePay/!svn/ver/107378/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/service/impl/AppOwnerServiceImpl.java
+END

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="queryService" class="com.yeepay.g3.utils.query.impl.QueryServiceImpl">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="querys">
+			<map>
+				<entry key="queryServiceInfo">
+					<bean class="com.yeepay.g3.utils.query.Query">
+						<property name="sql">
+							<value>
+								<![CDATA[
+									SELECT
+										S.*
+									FROM TBL_SOA_SERVICE_INFO S
+									/~ownerName:
+										LEFT OUTER JOIN TBL_SOA_APP_OWNER O ON O.APP_NAME = S.APP_NAME
+									~/
+									WHERE 1=1
+										/~queryInput:
+										AND (SERVICE_NAME LIKE '%' || {queryInput,string} || '%'
+											OR LCASE(SERVICE_INTERFACE_LOWCASE) LIKE '%' || LCASE({queryInput,string}) || '%')
+										~/
+										/~appName: AND S.APP_NAME LIKE '%' || {appName,string} || '%' ~/
+										/~ownerName:
+										AND (O.OWNER_NAME LIKE '%' || {ownerName,string} || '%'
+											OR LCASE(O.LOGIN_NAME) LIKE '%' || LCASE({ownerName,string}) || '%')
+										~/
+									WITH UR
+								]]>
+							</value>
+						</property>
+					</bean>
+				</entry>
+				<entry key="queryAppInfo">
+					<bean class="com.yeepay.g3.utils.query.Query">
+						<property name="sql">
+							<value>
+								<![CDATA[
+									SELECT
+										A.*
+									FROM TBL_SOA_APP_INFO A
+									/~ownerName:
+										LEFT OUTER JOIN TBL_SOA_APP_OWNER O ON O.APP_NAME = A.APP_NAME
+									~/
+									WHERE 1=1
+										/~queryInput:
+										AND (APP_TITLE LIKE '%' || {queryInput,string} || '%'
+											OR LCASE(APP_NAME) LIKE '%' || LCASE({queryInput,string}) || '%')
+										~/
+										/~ownerName:
+										AND (O.OWNER_NAME LIKE '%' || {ownerName,string} || '%'
+											OR LCASE(O.LOGIN_NAME) LIKE '%' || LCASE({ownerName,string}) || '%')
+										~/
+									WITH UR
+								]]>
+							</value>
+						</property>
+					</bean>
+				</entry>
+				<entry key="queryNetwork">
+					<bean class="com.yeepay.g3.utils.query.Query">
+						<property name="sql">
+							<value>
+								<![CDATA[
+									SELECT
+										N.*
+									FROM TBL_SOA_NETWORK N
+									/~appName:
+										, TBL_SOA_APP_ADDRESS AA
+									~/
+									WHERE 1=1
+										/~status: AND STATUS LIKE {status,string} ~/
+										/~address != null && type=='consumer': AND CONSUMER LIKE '%' || {address,string} || '%' ~/
+										/~address != null && type=='provider': AND PROVIDER LIKE '%' || {address,string} || '%' ~/
+										/~address != null && type=='all': AND (CONSUMER LIKE '%' || {address,string} || '%' OR PROVIDER LIKE '%' || {address,string} || '%') ~/
+										/~appName:
+											AND AA.APP_NAME = {appName,string}
+											AND (N.CONSUMER LIKE AA.ADDRESS || '%' OR N.PROVIDER = AA.ADDRESS)
+										~/
+									WITH UR
+								]]>
+							</value>
+						</property>
+					</bean>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+</beans>

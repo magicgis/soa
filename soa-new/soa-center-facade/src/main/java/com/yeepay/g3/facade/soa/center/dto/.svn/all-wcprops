@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/YeePay/!svn/ver/182418/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dto
+END
+NetworkDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dto/NetworkDTO.java
+END
+DeployRecordDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/YeePay/!svn/ver/182418/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dto/DeployRecordDTO.java
+END
+AppOwnerDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/YeePay/!svn/ver/107378/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dto/AppOwnerDTO.java
+END
+MonitorStatisticsDataDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/YeePay/!svn/ver/107378/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dto/MonitorStatisticsDataDTO.java
+END
+MethodInfoDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dto/MethodInfoDTO.java
+END
+AppInfoDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dto/AppInfoDTO.java
+END
+MonitorStatisticsDataDTOWarpper.java
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/YeePay/!svn/ver/107378/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dto/MonitorStatisticsDataDTOWarpper.java
+END
+StatusInfoDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dto/StatusInfoDTO.java
+END
+MonitorDataItemDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dto/MonitorDataItemDTO.java
+END
+SystemInfoDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dto/SystemInfoDTO.java
+END
+MonitorChartDataDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dto/MonitorChartDataDTO.java
+END
+MonitorChartDataDTOWarpper.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dto/MonitorChartDataDTOWarpper.java
+END
+AppUpgradeInfoDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dto/AppUpgradeInfoDTO.java
+END
+MonitorDataQueryVO.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dto/MonitorDataQueryVO.java
+END
+RegistryDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dto/RegistryDTO.java
+END
+ServiceInfoDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dto/ServiceInfoDTO.java
+END
+AppDependencyDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dto/AppDependencyDTO.java
+END
+MonitorDataDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dto/MonitorDataDTO.java
+END
+MonitorChartDataItemDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dto/MonitorChartDataItemDTO.java
+END
+ServerInfoDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dto/ServerInfoDTO.java
+END
+AddressDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dto/AddressDTO.java
+END
+TagInfoDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dto/TagInfoDTO.java
+END

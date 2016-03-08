@@ -1,0 +1,40 @@
+10
+
+dir
+189113
+http://genshen.hu@172.17.103.2/YeePay/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/log
+http://genshen.hu@172.17.103.2/YeePay
+
+
+
+2015-05-22T03:16:08.319836Z
+138391
+wang.bao
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6a1d79de-9eb4-11df-a3e6-5f80a44899bd
+
+service
+dir
+
+dao
+dir
+
+facade
+dir
+
+entity
+dir
+

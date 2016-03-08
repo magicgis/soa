@@ -1,0 +1,161 @@
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/YeePay/!svn/ver/107378/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dubbo/domain
+END
+Operation.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dubbo/domain/Operation.java
+END
+Access.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dubbo/domain/Access.java
+END
+Agreement.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dubbo/domain/Agreement.java
+END
+Registry.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dubbo/domain/Registry.java
+END
+Layer.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dubbo/domain/Layer.java
+END
+Entity.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dubbo/domain/Entity.java
+END
+Document.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dubbo/domain/Document.java
+END
+Dependency.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dubbo/domain/Dependency.java
+END
+DependItem.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dubbo/domain/DependItem.java
+END
+User.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dubbo/domain/User.java
+END
+Favorite.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dubbo/domain/Favorite.java
+END
+Override.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dubbo/domain/Override.java
+END
+Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dubbo/domain/Test.java
+END
+ApprovalRequisition.java
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dubbo/domain/ApprovalRequisition.java
+END
+Cluster.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dubbo/domain/Cluster.java
+END
+Approval.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dubbo/domain/Approval.java
+END
+LoadBalance.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dubbo/domain/LoadBalance.java
+END
+Change.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dubbo/domain/Change.java
+END
+SearchHistory.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dubbo/domain/SearchHistory.java
+END
+Weight.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dubbo/domain/Weight.java
+END
+Mock.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dubbo/domain/Mock.java
+END
+Owner.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dubbo/domain/Owner.java
+END
+Provider.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dubbo/domain/Provider.java
+END
+Feature.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dubbo/domain/Feature.java
+END
+Consumer.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dubbo/domain/Consumer.java
+END
+Route.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/dubbo/domain/Route.java
+END

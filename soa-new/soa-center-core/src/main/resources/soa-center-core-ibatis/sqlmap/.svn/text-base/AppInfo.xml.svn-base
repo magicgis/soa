@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="AppInfo">
+
+	<resultMap type="AppInfo" id="appInfoMap">
+		<id property="appName" column="APP_NAME" />
+		<id property="appTitle" column="APP_TITLE" />
+		<id property="appDesc" column="APP_DESC" />
+		<id property="authNeeded" column="AUTH_NEEDED" />
+		<id property="role" column="ROLE" />
+		<id property="status" column="STATUS" />
+		<id property="addressCount" column="ADDRESS_COUNT" />
+		<id property="depAppCount" column="DEP_APP_COUNT" />
+		<id property="depByAppCount" column="DEP_BY_APP_COUNT" />
+		<id property="expServiceCount" column="EXP_SERVICE_COUNT" />
+		<id property="refServiceCount" column="REF_SERVICE_COUNT" />
+		<id property="docPath" column="DOC_PATH" />
+		<id property="javaDoc" column="JAVADOC" />
+		<id property="createDate" column="CREATE_DATE" />
+		<id property="lastModifyDate" column="LAST_MODIFY_DATE" />
+	</resultMap>
+
+	<insert id="insert" parameterType="AppInfo" keyProperty="id"
+		useGeneratedKeys="true">
+	INSERT INTO TBL_SOA_APP_INFO
+	(
+		APP_NAME,
+		APP_TITLE,
+		APP_DESC,
+		AUTH_NEEDED,
+		ROLE,
+		STATUS,
+		ADDRESS_COUNT,
+		DEP_APP_COUNT,
+		DEP_BY_APP_COUNT,
+		EXP_SERVICE_COUNT,
+		REF_SERVICE_COUNT,
+		DOC_PATH,
+		JAVADOC,
+		CREATE_DATE,
+		LAST_MODIFY_DATE
+	) VALUES (
+		#{appName,jdbcType=VARCHAR},
+		#{appTitle,jdbcType=VARCHAR},
+		#{appDesc,jdbcType=VARCHAR},
+		#{authNeeded,jdbcType=INTEGER},
+		#{role,jdbcType=VARCHAR},
+		#{status,jdbcType=VARCHAR},
+		#{addressCount,jdbcType=INTEGER},
+		#{depAppCount,jdbcType=INTEGER},
+		#{depByAppCount,jdbcType=INTEGER},
+		#{expServiceCount,jdbcType=INTEGER},
+		#{refServiceCount,jdbcType=INTEGER},
+		#{docPath,jdbcType=VARCHAR},
+		#{javaDoc,jdbcType=VARCHAR},
+		CURRENT_TIMESTAMP,
+		CURRENT_TIMESTAMP
+	)
+	</insert>
+
+	<select id="get" parameterType="String" resultMap="appInfoMap">
+		SELECT * FROM TBL_SOA_APP_INFO WHERE APP_NAME = #{appName}
+	</select>
+
+	<select id="getAll" parameterType="String" resultMap="appInfoMap">
+		SELECT * FROM TBL_SOA_APP_INFO WITH UR
+	</select>
+
+	<select id="queryApp" parameterType="Map" resultMap="appInfoMap">
+		SELECT * FROM TBL_SOA_APP_INFO
+		WHERE APP_NAME LIKE '%' || #{keyWord} || '%'
+			OR APP_TITLE LIKE '%' || #{keyWord} || '%'
+			OR APP_DESC LIKE '%' || #{keyWord} || '%'
+	</select>
+
+	<delete id="delete" parameterType="String">
+		DELETE FROM TBL_SOA_APP_INFO WHERE APP_NAME = #{appName}
+	</delete>
+
+	<update id="changeStatus" parameterType="Map">
+		UPDATE TBL_SOA_APP_INFO SET STATUS = #{status} WHERE APP_NAME = #{appName}
+	</update>
+
+	<update id="batchChangeStatus" parameterType="Map">
+		UPDATE TBL_SOA_APP_INFO SET STATUS = #{toStatus} WHERE STATUS = #{fromStatus}
+	</update>
+	<update id="batchChangeDown" parameterType="Map">
+		UPDATE TBL_SOA_APP_INFO SET STATUS = #{toStatus}, ADDRESS_COUNT = 0 WHERE STATUS = #{fromStatus}
+	</update>
+	<update id="syncServiceCount" parameterType="Map">
+		UPDATE TBL_SOA_APP_INFO SET
+			EXP_SERVICE_COUNT = #{expServiceCount,jdbcType=INTEGER},
+			REF_SERVICE_COUNT = #{refServiceCount,jdbcType=INTEGER}
+		WHERE APP_NAME = #{appName}
+	</update>
+
+	<update id="update" parameterType="AppInfo">
+		UPDATE TBL_SOA_APP_INFO
+		<set>
+			<if test="appTitle != null">APP_TITLE = #{appTitle,jdbcType=VARCHAR},</if>
+			<if test="appDesc != null">APP_DESC = #{appDesc,jdbcType=VARCHAR},</if>
+			<if test="authNeeded != null">AUTH_NEEDED = #{authNeeded,jdbcType=INTEGER},</if>
+			<if test="role != null">ROLE = #{role,jdbcType=VARCHAR},</if>
+			<if test="status != null">STATUS = #{status,jdbcType=VARCHAR},</if>
+			<if test="addressCount != null">ADDRESS_COUNT = #{addressCount,jdbcType=INTEGER},</if>
+			<if test="depAppCount != null">DEP_APP_COUNT = #{depAppCount,jdbcType=INTEGER},</if>
+			<if test="depByAppCount != null">DEP_BY_APP_COUNT = #{depByAppCount,jdbcType=INTEGER},</if>
+			<if test="expServiceCount != null">EXP_SERVICE_COUNT = #{expServiceCount,jdbcType=INTEGER},</if>
+			<if test="refServiceCount != null">REF_SERVICE_COUNT = #{refServiceCount,jdbcType=INTEGER},</if>
+			<if test="docPath != null">DOC_PATH = #{docPath,jdbcType=VARCHAR},</if>
+			<if test="javaDoc != null">JAVADOC = #{javaDoc,jdbcType=VARCHAR},</if>
+			LAST_MODIFY_DATE = CURRENT_TIMESTAMP
+		</set>
+		WHERE APP_NAME = #{appName}
+	</update>
+
+	<update id="updateBaseInfo" parameterType="AppInfo">
+		UPDATE TBL_SOA_APP_INFO
+		<set>
+			<if test="appTitle != null">APP_TITLE = #{appTitle,jdbcType=VARCHAR},</if>
+			<if test="appDesc != null">APP_DESC = #{appDesc,jdbcType=VARCHAR},</if>
+			<if test="docPath != null">DOC_PATH = #{docPath,jdbcType=VARCHAR},</if>
+			<if test="javaDoc != null">JAVADOC = #{javaDoc,jdbcType=VARCHAR},</if>
+			LAST_MODIFY_DATE = CURRENT_TIMESTAMP
+		</set>
+		WHERE APP_NAME = #{appName}
+	</update>
+
+	<update id="moveJavadoc" parameterType="Map">
+		UPDATE TBL_SOA_APP_INFO SET JAVADOC = REPLACE(JAVADOC,#{source,jdbcType=VARCHAR},#{target,jdbcType=VARCHAR})
+		WHERE JAVADOC IS NOT NULL
+	</update>
+</mapper>

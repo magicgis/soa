@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.yeepay.g3.soa.center</groupId>
+		<artifactId>soa-center-parent</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<groupId>com.yeepay.g3.core.soa.center</groupId>
+	<artifactId>soa-center-core</artifactId>
+	<version>${soa-center-core.version}</version>
+	<name>${project.artifactId}</name>
+	<packaging>jar</packaging>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.yeepay.g3.facade.soa.center</groupId>
+			<artifactId>soa-center-facade</artifactId>
+		</dependency>
+        <dependency>
+            <groupId>com.yeepay.g3.facade.notifier</groupId>
+            <artifactId>notifier-facade</artifactId>
+        </dependency>
+		<dependency>
+			<groupId>com.yeepay.g3.utils</groupId>
+			<artifactId>yeepay-cache</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.yeepay.g3.utils</groupId>
+			<artifactId>yeepay-persistence</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.yeepay.g3.utils</groupId>
+			<artifactId>yeepay-query</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.yeepay.g3.utils</groupId>
+			<artifactId>yeepay-rmi</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.yeepay.g3.utils</groupId>
+			<artifactId>yeepay-event</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+		</dependency>
+
+        <!-- for dubbo protocol -->
+		<dependency>
+			<groupId>org.jboss.netty</groupId>
+			<artifactId>netty</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.yeepay.g3.utils</groupId>
+			<artifactId>yeepay-unittest</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- rabbitmq -->
+		<dependency>
+			<groupId>com.yeepay.g3.utils</groupId>
+			<artifactId>yeepay-async</artifactId>
+		</dependency>
+		<!-- kafka -->
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka_2.10</artifactId>
+			<version>0.8.2.0</version>
+		</dependency>
+	</dependencies>
+</project>

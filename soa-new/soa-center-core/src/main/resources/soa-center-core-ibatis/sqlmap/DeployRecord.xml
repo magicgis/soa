@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="DeployRecord">
+
+	<resultMap type="DeployRecord" id="deployRecordMap">
+		<id property="id" column="ID"/>
+		<id property="address" column="ADDRESS"/>
+		<id property="operator" column="OPERATOR"/>
+		<id property="reqAddress" column="REQ_ADDRESS"/>
+		<id property="deployTime" column="DEPLOY_TIME"/>
+		<id property="recoverTime" column="RECOVER_TIME"/>
+	</resultMap>
+
+	<insert id="insert" parameterType="DeployRecord" keyProperty="id"
+			useGeneratedKeys="true">
+		INSERT INTO TBL_SOA_DEPLOY_RECORD
+		(
+			ADDRESS,
+			OPERATOR,
+			REQ_ADDRESS,
+			DEPLOY_TIME,
+			RECOVER_TIME
+		) VALUES (
+			#{address,jdbcType=VARCHAR},
+			#{operator,jdbcType=VARCHAR},
+			#{reqAddress,jdbcType=VARCHAR},
+			#{deployTime,jdbcType=TIMESTAMP},
+			NULL
+		)
+	</insert>
+
+	<insert id="batchInsert" parameterType="DeployRecord">
+		INSERT INTO TBL_SOA_DEPLOY_RECORD
+			(
+			ADDRESS,
+			OPERATOR,
+			REQ_ADDRESS,
+			DEPLOY_TIME,
+			RECOVER_TIME
+		) VALUES (
+			#{address,jdbcType=VARCHAR},
+			#{operator,jdbcType=VARCHAR},
+			#{reqAddress,jdbcType=VARCHAR},
+			#{deployTime,jdbcType=TIMESTAMP},
+			NULL
+		)
+	</insert>
+
+	<select id="get" parameterType="Long" resultMap="deployRecordMap">
+		SELECT * FROM TBL_SOA_DEPLOY_RECORD WHERE ID = #{id}
+	</select>
+	<select id="findAllUnRecovered" parameterType="Map" resultType="Long">
+		<![CDATA[
+		SELECT ID FROM TBL_SOA_DEPLOY_RECORD WHERE RECOVER_TIME IS NULL AND DEPLOY_TIME < CURRENT_TIMESTAMP - 5 MINUTE WITH UR
+		]]>
+	</select>
+	<update id="recover" parameterType="Long">
+		UPDATE TBL_SOA_DEPLOY_RECORD SET
+			RECOVER_TIME = CURRENT_TIMESTAMP
+		WHERE ID = #{id}
+	</update>
+	<delete id="delete" parameterType="Long">
+		DELETE FROM TBL_SOA_DEPLOY_RECORD WHERE ID = #{id}
+	</delete>
+</mapper>

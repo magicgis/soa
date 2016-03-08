@@ -1,0 +1,5 @@
+host=rabbitmq.bass.3g
+port=5672
+userName=soa
+password=Zj4xyBkgjd-soa
+virtualHost=soa

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ServiceInfo">
+
+	<resultMap type="ServiceInfo" id="serviceInfoMap">
+		<id property="id" column="ID" />
+		<id property="appName" column="APP_NAME" />
+		<id property="serviceInterface" column="SERVICE_INTERFACE" />
+		<id property="serviceInterfaceLowcase" column="SERVICE_INTERFACE_LOWCASE" />
+		<id property="serviceName" column="SERVICE_NAME" />
+		<id property="serviceDesc" column="SERVICE_DESC" />
+		<id property="serviceProtocol" column="SERVICE_PROTOCOL" />
+		<id property="serviceSign" column="SERVICE_SIGN" />
+		<id property="providerCount" column="PROVIDER_COUNT" />
+		<id property="consumerCount" column="CONSUMER_COUNT" />
+		<id property="status" column="STATUS" />
+		<id property="createDate" column="CREATE_DATE" />
+		<id property="lastModifyDate" column="LAST_MODIFY_DATE" />
+	</resultMap>
+
+	<insert id="insert" parameterType="ServiceInfo" keyProperty="id"
+		useGeneratedKeys="true">
+	INSERT INTO TBL_SOA_SERVICE_INFO
+	(
+		APP_NAME,
+		SERVICE_INTERFACE,
+		SERVICE_INTERFACE_LOWCASE,
+		SERVICE_NAME,
+		SERVICE_DESC,
+		SERVICE_PROTOCOL,
+		SERVICE_SIGN,
+		PROVIDER_COUNT,
+		CONSUMER_COUNT,
+		STATUS,
+		CREATE_DATE,
+		LAST_MODIFY_DATE
+	) VALUES (
+		#{appName,jdbcType=VARCHAR},
+		#{serviceInterface,jdbcType=VARCHAR},
+		#{serviceInterfaceLowcase,jdbcType=VARCHAR},
+		#{serviceName,jdbcType=VARCHAR},
+		#{serviceDesc,jdbcType=VARCHAR},
+		#{serviceProtocol,jdbcType=VARCHAR},
+		#{serviceSign,jdbcType=VARCHAR},
+		#{providerCount,jdbcType=INTEGER},
+		#{consumerCount,jdbcType=INTEGER},
+		#{status,jdbcType=VARCHAR},
+		CURRENT_TIMESTAMP,
+		CURRENT_TIMESTAMP
+	)
+	</insert>
+
+	<select id="get" parameterType="String" resultMap="serviceInfoMap">
+		SELECT * FROM TBL_SOA_SERVICE_INFO WHERE ID = #{id}
+	</select>
+
+	<select id="find" parameterType="String" resultMap="serviceInfoMap">
+		SELECT * FROM TBL_SOA_SERVICE_INFO WHERE SERVICE_INTERFACE_LOWCASE = #{serviceInterfaceLowcase,jdbcType=VARCHAR} WITH UR
+	</select>
+	<select id="queryService" parameterType="String" resultMap="serviceInfoMap">
+		SELECT * FROM TBL_SOA_SERVICE_INFO
+		WHERE SERVICE_INTERFACE_LOWCASE LIKE '%' LCASE(#{keyword,jdbcType=VARCHAR}) || '%'
+		SERVICE_NAME LIKE '%' LCASE(#{keyword,jdbcType=VARCHAR}) || '%'
+		WITH UR
+	</select>
+	<select id="queryByApp" parameterType="String" resultMap="serviceInfoMap">
+		SELECT * FROM TBL_SOA_SERVICE_INFO WHERE APP_NAME = #{appName,jdbcType=VARCHAR} WITH UR
+	</select>
+
+	<delete id="delete" parameterType="Long">
+		DELETE FROM TBL_SOA_SERVICE_INFO WHERE ID = #{id}
+	</delete>
+	<delete id="deleteByService" parameterType="String">
+		DELETE FROM TBL_SOA_SERVICE_INFO WHERE SERVICE_INTERFACE_LOWCASE = #{serviceInterfaceLowcase,jdbcType=VARCHAR}
+	</delete>
+	<delete id="deleteByApp" parameterType="String">
+		DELETE FROM TBL_SOA_SERVICE_INFO WHERE APP_NAME = #{appName,jdbcType=VARCHAR}
+	</delete>
+
+	<update id="changeStatus" parameterType="Map">
+		UPDATE TBL_SOA_SERVICE_INFO SET STATUS = #{status} WHERE ID = #{id}
+	</update>
+	<update id="batchChangeStatus" parameterType="Map">
+		UPDATE TBL_SOA_SERVICE_INFO SET STATUS = #{toStatus}
+		WHERE STATUS = #{fromStatus}
+			<if test="status != null">AND STATUS = #{status,jdbcType=VARCHAR}</if>
+	</update>
+	<update id="changeStatusByApp" parameterType="Map">
+		UPDATE TBL_SOA_SERVICE_INFO SET STATUS = #{status}
+		WHERE APP_NAME = #{appName}
+	</update>
+
+	<update id="update" parameterType="ServiceInfo">
+		UPDATE TBL_SOA_SERVICE_INFO
+		<set>
+			<if test="serviceName != null">SERVICE_NAME = #{serviceName,jdbcType=VARCHAR},</if>
+			<if test="serviceDesc != null">SERVICE_DESC = #{serviceDesc,jdbcType=VARCHAR},</if>
+			<if test="serviceProtocol != null">SERVICE_PROTOCOL = #{serviceProtocol,jdbcType=VARCHAR},</if>
+			<if test="serviceSign != null">SERVICE_SIGN = #{serviceSign,jdbcType=VARCHAR},</if>
+			<if test="providerCount != null">PROVIDER_COUNT = #{providerCount,jdbcType=INTEGER},</if>
+			<if test="consumerCount != null">CONSUMER_COUNT = #{consumerCount,jdbcType=INTEGER},</if>
+			<if test="status != null">STATUS = #{status,jdbcType=VARCHAR},</if>
+			LAST_MODIFY_DATE = CURRENT_TIMESTAMP
+		</set>
+		WHERE ID = #{id}
+	</update>
+</mapper>

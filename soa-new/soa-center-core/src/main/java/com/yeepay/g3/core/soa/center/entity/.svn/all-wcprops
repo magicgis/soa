@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/YeePay/!svn/ver/182418/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/entity
+END
+AppDependency.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/entity/AppDependency.java
+END
+MonitorData.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/YeePay/!svn/ver/120524/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/entity/MonitorData.java
+END
+MonitorChartData.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/YeePay/!svn/ver/107378/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/entity/MonitorChartData.java
+END
+AppUpgradeInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/entity/AppUpgradeInfo.java
+END
+Address.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/entity/Address.java
+END
+AppAddress.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/entity/AppAddress.java
+END
+MonitorDataBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/entity/MonitorDataBuilder.java
+END
+Network.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/entity/Network.java
+END
+AppOwner.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/entity/AppOwner.java
+END
+DeployRecord.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/YeePay/!svn/ver/182418/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/entity/DeployRecord.java
+END
+AppInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/entity/AppInfo.java
+END
+MethodInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/entity/MethodInfo.java
+END
+ServiceInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-core/src/main/java/com/yeepay/g3/core/soa/center/entity/ServiceInfo.java
+END

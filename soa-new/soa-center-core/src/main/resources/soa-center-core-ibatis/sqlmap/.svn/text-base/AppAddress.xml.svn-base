@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="AppAddress">
+
+	<resultMap type="AppAddress" id="appAddressMap">
+		<id property="id" column="ID" />
+		<id property="address" column="ADDRESS" />
+		<id property="appName" column="APP_NAME" />
+	</resultMap>
+
+	<insert id="insert" parameterType="AppAddress" keyProperty="id"
+		useGeneratedKeys="true">
+	INSERT INTO TBL_SOA_APP_ADDRESS
+	(
+		ADDRESS,
+		APP_NAME
+	) VALUES (
+		#{address,jdbcType=VARCHAR},
+		#{appName,jdbcType=VARCHAR}
+	)
+	</insert>
+
+	<insert id="batchInsert" parameterType="AppAddress">
+	INSERT INTO TBL_SOA_APP_ADDRESS
+	(
+		ADDRESS,
+		APP_NAME
+	) VALUES (
+		#{address,jdbcType=VARCHAR},
+		#{appName,jdbcType=VARCHAR}
+	)
+	</insert>
+
+	<select id="get" parameterType="Long" resultMap="appAddressMap">
+		SELECT * FROM TBL_SOA_APP_ADDRESS WHERE ID = #{id}
+	</select>
+
+	<select id="find" parameterType="Map" resultMap="appAddressMap">
+		SELECT * FROM TBL_SOA_APP_ADDRESS WHERE ADDRESS = #{address} AND APP_NAME = #{appName} FETCH FIRST 1 ROWS ONLY
+	</select>
+
+	<select id="queryApps" parameterType="Map" resultType="String">
+		SELECT ADDR.APP_NAME FROM
+			TBL_SOA_APP_ADDRESS ADDR
+			<if test="role != null">,TBL_SOA_APP_INFO APP</if>
+		WHERE ADDRESS = #{address,jdbcType=VARCHAR}
+			<if test="role != null">AND ADDR.APP_NAME=APP.APP_NAME AND APP.ROLE=#{role,jdbcType=VARCHAR}</if>
+		WITH UR
+	</select>
+
+	<select id="queryByAddress" parameterType="String" resultMap="appAddressMap">
+		SELECT * FROM TBL_SOA_APP_ADDRESS WHERE ADDRESS = #{address} WITH UR
+	</select>
+
+	<select id="queryByApp" parameterType="String" resultMap="appAddressMap">
+		SELECT * FROM TBL_SOA_APP_ADDRESS WHERE APP_NAME = #{appName} WITH UR
+	</select>
+
+	<delete id="delete" parameterType="long">
+		DELETE FROM TBL_SOA_APP_ADDRESS WHERE ID = #{id}
+	</delete>
+
+	<delete id="deleteByAddress" parameterType="String">
+		DELETE FROM TBL_SOA_APP_ADDRESS WHERE ADDRESS = #{address}
+	</delete>
+
+	<delete id="deleteByApp" parameterType="String">
+		DELETE FROM TBL_SOA_APP_ADDRESS WHERE APP_NAME = #{appName}
+	</delete>
+
+	<delete id="deleteAllByAddress" parameterType="String">
+		DELETE FROM TBL_SOA_APP_ADDRESS WHERE ADDRESS LIKE #{address} || '%'
+	</delete>
+</mapper>

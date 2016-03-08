@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/YeePay/!svn/ver/119577/dev/app/dubbo-boss/branches/default/src/main/resources/template
+END
+singleAppDependency.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/YeePay/!svn/ver/103910/dev/app/dubbo-boss/branches/default/src/main/resources/template/singleAppDependency.tpl
+END
+allAppDependency.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/YeePay/!svn/ver/119577/dev/app/dubbo-boss/branches/default/src/main/resources/template/allAppDependency.tpl
+END

@@ -1,0 +1,193 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>yeepay3g</groupId>
+		<artifactId>yeepay3g-parent</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
+	<groupId>dubbo-boss</groupId>
+	<artifactId>dubbo-boss</artifactId>
+	<packaging>war</packaging>
+	<version>1.0</version>
+
+	<properties>
+		<config.namespace>default</config.namespace>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.yeepay.g3.employee</groupId>
+			<artifactId>employee-facade</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.yeepay.g3.facade.soa.center</groupId>
+			<artifactId>soa-center-facade</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.yeepay.g3.facade.notifier</groupId>
+			<artifactId>notifier-facade</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.yeepay.g3.utils</groupId>
+			<artifactId>yeepay-event</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.yeepay.g3.utils</groupId>
+			<artifactId>yeepay-cache</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+
+		<!-- 查询组件 start -->
+		<dependency>
+			<groupId>com.yeepay.g3.utils</groupId>
+			<artifactId>yeepay-query</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.yeepay.g3.utils</groupId>
+			<artifactId>yeepay-ajaxquery</artifactId>
+		</dependency>
+		<!-- 查询组件 end -->
+
+		<!-- 加入标签库 -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+		</dependency>
+		<!-- 重写tag -->
+		<!--<dependency> -->
+		<!--<groupId>javax.servlet.jsp</groupId> -->
+		<!--<artifactId>jsp-api</artifactId> -->
+		<!--EL的jar包冲突，导致功能测试跑不起来 -->
+		<!--<scope>provided</scope> -->
+		<!--</dependency> -->
+		<!-- Web end -->
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotation</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.yeepay.g3.utils</groupId>
+			<artifactId>yeepay-rmi</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>yeepay3g-app-boss</groupId>
+			<artifactId>yeepay-boss</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>com.yeepay.g3.utils</groupId>
+					<artifactId>yeepay-easyquery</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.yeepay.g3.utils</groupId>
+					<artifactId>yeepay-web</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.struts</groupId>
+					<artifactId>struts2-json-plugin</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+
+		<!-- 报表 -->
+		<dependency>
+			<groupId>jfree</groupId>
+			<artifactId>jfreechart</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>hamcrest-core</groupId>
+			<artifactId>hamcrest-core</artifactId>
+			<version>1.3</version>
+		</dependency>
+		<dependency>
+			<groupId>hamcrest-library</groupId>
+			<artifactId>hamcrest-library</artifactId>
+			<version>1.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>dubbo-boss</finalName>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<configuration>
+					<projectNameTemplate>[artifactId]</projectNameTemplate>
+					<wtpmanifest>true</wtpmanifest>
+					<wtpapplicationxml>true</wtpapplicationxml>
+					<wtpversion>2.0</wtpversion>
+					<manifest>${basedir}/src/main/resources/META-INF/MANIFEST.MF</manifest>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.zeroturnaround</groupId>
+				<artifactId>jrebel-maven-plugin</artifactId>
+				<version>1.1.5</version>
+				<configuration>
+					<addResourcesDirToRebelXml>true</addResourcesDirToRebelXml>
+					<alwaysGenerate>true</alwaysGenerate>
+					<showGenerated>true</showGenerated>
+				</configuration>
+				<executions>
+					<execution>
+						<id>generate-rebel-xml</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<url>http://172.17.102.103:8080/manager/text</url>
+					<server>tomcat-manager</server>
+					<path>/${project.build.finalName}</path>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

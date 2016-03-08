@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/enums
+END
+NetworkStatusEnum.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/enums/NetworkStatusEnum.java
+END
+TagTypeEnum.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/enums/TagTypeEnum.java
+END
+AppRoleEnum.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/enums/AppRoleEnum.java
+END
+AuthStatusEnum.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/enums/AuthStatusEnum.java
+END
+SoaStatusEnum.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/enums/SoaStatusEnum.java
+END
+QueryTypeEnum.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/YeePay/!svn/ver/107375/dev/3g/soa-center/branches/default-new/soa-center-facade/src/main/java/com/yeepay/g3/facade/soa/center/enums/QueryTypeEnum.java
+END
